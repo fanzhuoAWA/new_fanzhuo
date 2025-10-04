@@ -11,3 +11,9 @@ title = 'Test'
 ### 测试
 
 正文。
+
+> [!CAUTION]
+> 噢！
+
+> [!IMPORTANT]
+> 噢！

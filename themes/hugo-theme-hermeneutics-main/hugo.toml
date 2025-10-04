@@ -62,9 +62,9 @@ title                  = "Fanzhuo's Blog"
     weight     = 30
 
 [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "projects"
+    identifier = "friends"
+    name       = "Friends"
+    url        = "friends"
     weight     = 20
 
 [[menu.main]]
@@ -72,6 +72,12 @@ title                  = "Fanzhuo's Blog"
     name       = "About"
     url        = "about"
     weight     = 30
+
+[[menu.main]]
+    identifier = "search"
+    name       = "Search"
+    url        = "search"
+    weight     = 40
 
 [params]
     # 站点基础信息

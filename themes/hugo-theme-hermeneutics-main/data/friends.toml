@@ -7,12 +7,12 @@
     url  = "https://chlo.is"
 
 [[friend]]
-    ava  = "https://www.cursor.com/favicon.ico"
-    des  = "The AI Code Editor"
-    name = "Cursor"
-    note = "主题的另一个「作者」"
+    ava  = "http://localhost:6948/img/avatar.png"
+    des  = "TEST"
+    name = "TEST_user"
+    note = "TEST"
     room = "000A"
-    url  = "https://www.cursor.com"
+    url  = "https://example.com"
 
 [[friend]]
     ava  = "https://ui-avatars.com/api/?name=John+Doe&size=128"
