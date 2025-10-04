@@ -1,0 +1,20 @@
+{{ if eq .Type "alert" }}
+{{- $alertData := site.Data.alert -}}
+{{- $alertKey := .AlertType | default $alertData.default -}}
+{{- $config := index $alertData $alertKey | default (index $alertData $alertData.default) -}}
+
+<div class="my-6 rounded-lg p-4 border-l-4 {{ $config.border }} {{ $config.bg }}" role="status">
+    <div class="mb-2 flex items-center gap-2 font-medium pl-2 {{ $config.text }}">
+        <i class="w-5 h-5 {{ $config.icon }}" aria-hidden="true"></i>
+        <span>{{- with .AlertTitle }}{{ . }}{{ else }}{{ or (i18n $alertKey) (title $alertKey) }}{{ end -}}</span>
+    </div>
+    <div class="p-2 pb-4 prose-p:my-0">
+        {{ .Text }}
+    </div>
+</div>
+
+{{- else -}}
+<blockquote class="border-l-2 border-border/60 pl-4">
+    {{ .Text }}
+</blockquote>
+{{- end -}}

@@ -1,0 +1,18 @@
+{{- partial "utils/loadcss.html" "css/article/comments/twikoo.css" -}}
+
+<div id="twikoo"></div>
+
+<!-- Twikoo 脚本 -->
+<script src="{{ printf " %s/npm/twikoo@1.6.44/dist/twikoo.min.js" .Site.Params.cdn.jsd }}" crossorigin="anonymous"
+    defer></script>
+<script>
+    window.addEventListener('load', () => {
+        twikoo.init({
+            envId: '{{ .Site.Params.comments.twikoo.envId }}',
+            el: '#twikoo',
+            lang: 'zh-CN'
+        });
+    });
+</script>
+
+{{- partialCached "utils/loadjs.html" (dict "src" "js/article/twikoo-owo.js" "defer" true) "js_article_twikoo-owo" -}}

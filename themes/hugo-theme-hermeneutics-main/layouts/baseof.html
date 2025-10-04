@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{- .Site.LanguageCode -}}">
+
+<head>
+    {{- partial "global/head.html" . -}}
+    {{- block "head" . -}}{{- end -}}
+</head>
+
+<body class="min-h-screen flex flex-col gap-y-4 bg-background text-foreground transition-colors">
+    {{- partialCached "components/h-card.html" . "components_h-card" -}}
+    
+    {{- partial "global/header.html" . -}}
+
+    <main class="flex-grow anim-fadein">
+        <span class="sr-only">{{- i18n "main" -}}</span>
+        {{- block "main" . -}}{{- end -}}
+    </main>
+
+    {{- partialCached "global/footer.html" . "global_footer" -}}
+
+    {{- partialCached "utils/loadjs.html" (dict "src" "vendor/instantpage.min.js") "vendor_instantpage" -}}
+</body>
+
+</html>

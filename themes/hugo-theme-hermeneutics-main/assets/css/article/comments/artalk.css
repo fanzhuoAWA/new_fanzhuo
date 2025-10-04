@@ -1,0 +1,161 @@
+.artalk {
+	--at-color-main: var(--herm-accent) !important;
+	--at-radius: 8px;
+	--at-border-color: var(--herm-border);
+	--at-bg-card: var(--herm-background);
+}
+
+/* --- 编辑器区域 --- */
+.atk-main-editor {
+	border: 1px solid var(--at-border-color);
+	border-radius: var(--at-radius);
+	background: var(--at-bg-card);
+	padding: 1rem;
+	margin-bottom: 1.5rem;
+
+	> .atk-textarea-wrap > .atk-textarea {
+		margin: 0;
+		background: inherit;
+		font-size: inherit;
+		line-height: 1.5;
+	}
+
+	> .atk-bottom .atk-send-btn {
+		background: var(--herm-accent);
+		border-radius: var(--at-radius);
+		margin: 0;
+	}
+}
+
+/* 表情选择器样式 */
+.atk-editor-plug-emoticons > .atk-grp-switcher {
+	background: var(--at-bg-card);
+}
+
+/* --- 评论结构调整 --- */
+.atk-comment {
+	margin: 0;
+	padding: 1.25rem 0;
+	color: var(--herm-foreground);
+
+	> .atk-avatar img {
+		border-radius: var(--at-radius);
+		margin: 0 1rem 0 0;
+		width: 3rem;
+		height: 3rem;
+	}
+
+	> .atk-main > .atk-header {
+		margin: 0 0 0.75rem 0;
+		font-size: inherit;
+		font-weight: normal;
+
+		.atk-item.atk-nick,
+		.atk-item.atk-nick a,
+		.atk-item.atk-reply-at > .atk-nick {
+			color: inherit;
+			font-size: inherit;
+
+			a:hover {
+				color: var(--at-color-main);
+				transition: all 0.3s ease;
+			}
+		}
+
+		.atk-badge {
+			font-size: 0.85rem;
+		}
+
+		.atk-item.atk-date {
+			color: var(--herm-muted-foreground);
+			font-size: 0.8rem;
+			margin-left: 0.5rem;
+		}
+	}
+
+	> .atk-main > .atk-body {
+		.atk-pending {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--herm-muted-foreground);
+			padding: 0.75rem 1rem;
+			margin: 0.75rem 0;
+			background: rgba(var(--herm-muted), 0.08);
+			border-left: 0.25rem solid #ff6f61;
+			border-radius: var(--at-radius);
+			font-style: italic;
+		}
+	}
+
+	> .atk-main > .atk-footer {
+		margin-top: 0.75rem;
+
+		.atk-actions .atk-btn {
+			color: var(--herm-muted-foreground);
+			font-size: 0.8rem;
+			padding: 0.25rem 0.5rem;
+			margin-right: 1rem;
+
+			&:hover {
+				color: var(--herm-accent);
+			}
+		}
+	}
+}
+
+/* 嵌套评论 */
+.atk-comment .atk-comment {
+	margin-top: 1.5rem;
+}
+
+/* 重置 prose 对特定元素的影响 */
+.artalk {
+	/* 防止 prose 的链接样式影响 Artalk 的按钮和交互元素 */
+	.atk-btn,
+	.atk-nick a,
+	.atk-reply-at .atk-nick {
+		border-bottom: none !important;
+
+		&:hover {
+			border-bottom: none !important;
+		}
+	}
+
+	/* 确保表情图片不受 prose 影响 */
+	img[atk-emoticon] {
+		display: inline-block;
+		vertical-align: middle;
+		max-height: 3rem;
+		margin: 0 0.25rem;
+		border-radius: 4px;
+	}
+
+	/* 确保头像不受 prose 影响 */
+	.atk-avatar img {
+		margin: 0 1rem 0 0 !important;
+	}
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+	.atk-comment {
+		padding: 1rem 0;
+
+		> .atk-avatar img {
+			width: 3rem;
+			height: 3rem;
+			margin-right: 1rem;
+		}
+
+		.atk-comment {
+			margin-left: 1rem;
+			padding-left: 0.75rem;
+		}
+	}
+}
+
+/* 隐藏不需要的元素 */
+.atk-list-footer {
+	display: none;
+}

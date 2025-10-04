@@ -1,0 +1,9 @@
+WORKDIR := `pwd`
+BLOGDIR := `echo "${HOME}/Blog"`
+
+dev:
+    @hugo server -s exampleSite --themesDir ../.. --tlsAuto
+
+sync:
+    @cd ${HOME}/Blog && git ls-files -z | rsync -avh --delete --files-from=- --from0 {{BLOGDIR}}/ {{WORKDIR}}/exampleSite
+    @cd {{WORKDIR}}

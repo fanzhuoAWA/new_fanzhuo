@@ -1,0 +1,18 @@
+{{- with resources.Get "css/article/toc.css" -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end -}}
+
+<input type="checkbox" id="toc-toggle" class="toc-toggle__checkbox hidden" tabindex="-1" aria-hidden="true">
+
+<aside class="toc-sidebar hidden lg:block left-4 h-full">
+    <div class="sticky top-[var(--herm-toc-offset)]">
+        <div class="text-base flex flex-col gap-4 ">
+            <h2 class="font-medium text-foreground/80">
+                {{- i18n "article.toc" -}}
+            </h2>
+            <nav id="toc-main" class="toc-main text-foreground/70">
+                {{- .TableOfContents -}}
+            </nav>
+        </div>
+    </div>
+</aside>

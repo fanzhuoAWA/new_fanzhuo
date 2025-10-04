@@ -1,0 +1,23 @@
+<section aria-labelledby="license-heading" class="p-6 md:p-8 rounded-xl border border-border/40 backdrop-blur bg-muted/20 flex items-center gap-x-8">
+
+    <i class="i-carbon-scales w-2rem h-2rem text-primary/70 shrink-0" aria-hidden="true"></i>
+
+    <div class="space-y-2">
+        <h2 id="license-heading" class="font-medium">License</h2>
+
+        <p class="text-sm text-muted-foreground space-x-1">
+            <span>{{- i18n "article.license" -}}</span>
+            <a href={{ .Site.Params.licenselink | default "https://creativecommons.org/licenses/by-sa/4.0/" }}
+                target="_blank" rel="noopener noreferrer license"
+                class="font-mono text-xs bg-muted/50 px-2 py-1 rounded hover:text-foreground/80">
+                {{- .Site.Params.license | default "CC BY-SA 4.0" -}}
+            </a>
+        </p>
+
+        <p class="text-sm text-muted-foreground space-x-1">
+            <span>{{ i18n "article.ori_link" }}</span>
+            <a href="{{ .Permalink }}"
+                class="font-mono text-xs bg-muted/50 px-2 py-1 rounded hover:text-foreground/80">{{ .Permalink }}</a>
+        </p>
+    </div>
+</section>

@@ -1,0 +1,158 @@
+baseURL                = "https://example.com/"
+defaultContentLanguage = "en"
+enableCsrf             = false
+hasCJKLanguage         = false
+languageCode           = "en-US"
+theme                  = "hugo-theme-hermeneutics-main"
+timeZone               = "Europe/Berlin"
+title                  = "Fanzhuo's Blog"
+
+[mediaTypes]
+    [mediaTypes.'application/atom+xml']
+        suffixes = ['atom']
+    # 不优雅，但能用
+    [mediaTypes."application/json"]
+        suffixes = ["", "json"]
+
+[outputFormats]
+    [outputFormats.atom]
+        baseName  = "feed"
+        mediaType = "application/atom+xml"
+        minify    = true
+        noUgly    = true
+    [outputFormats.jsonfeed]
+        baseName  = "feed"
+        mediaType = "application/json"
+        minify    = true
+        noUgly    = true
+
+[outputs]
+    home     = ["atom", "html", "jsonfeed"]
+    section  = ["html"]
+    taxonomy = ["html"]
+    term     = ["html"]
+
+[Permalinks]
+    posts = "/:slug/"
+
+[[menu.main]]
+    identifier = "archives"
+    name       = "Archives"
+    weight     = 10
+
+[[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    parent     = "archives"
+    url        = "posts"
+    weight     = 10
+
+[[menu.main]]
+    identifier = "categories"
+    name       = "Categories"
+    parent     = "archives"
+    url        = "categories"
+    weight     = 20
+
+[[menu.main]]
+    identifier = "tags"
+    name       = "Tags"
+    parent     = "archives"
+    url        = "tags"
+    weight     = 30
+
+[[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects"
+    weight     = 20
+
+[[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about"
+    weight     = 30
+
+[params]
+    # 站点基础信息
+    description = "My Development Logs, Life Essays, and Algorithm Discussions."
+    keywords    = ["Blog", "Developer", "Hugo", "Open Source", "Tech"]
+    license     = "CC BY-NC-SA 4.0"
+    licenselink = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-Hans"
+    startDate   = "09/28/2025 00:00:00"
+
+    # 功能开关
+    announcement = false
+    summary      = true
+
+    # CDN 配置
+    [params.cdn]
+        jsd = "https://cdn.jsdelivr.net"
+
+    # 作者信息
+    [params.author]
+        avatar = "/img/avatar.png"
+        bio    = "My Development Logs, Life Essays, and Algorithm Discussions."
+        name   = "Fanzhuo"
+        tags   = ["Indie Blogger", "Developer", "Open Source Enthusiast", "Tech Lover", "OIer"]
+
+    # 订阅配置
+    [params.feed]
+        [params.feed.atom]
+            fullText = true
+            limit    = 10
+
+        [params.feed.folo]
+            enable = false
+            feedId = ""
+            userId = ""
+
+        [params.feed.jsonfeed]
+            fullText = true
+            limit    = 10
+
+    # 评论系统配置
+    [params.comments]
+        enable = false
+        type   = "twikoo"
+
+        [params.comments.twikoo]
+            envId = "your-twikoo-env-id"
+
+        [params.comments.artalk]
+            server = ""
+
+    # I will never support Google Analytics and 百度统计.
+    # Don't even bother to ask.
+    # Maybe I will add Plausible, Umami and Matomo support later.
+    [params.analytics]
+        enable = false
+        type   = "goatcounter"
+
+        [params.analytics.goatcounter]
+            domain = "https://your-goatcounter-domain"
+
+    # 备案信息
+    [params.beian]
+        enable = false
+        # 公安联网备案
+        [params.beian.mps]
+            num  = ""
+            text = ""
+        # ICP 备案
+        [params.beian.icp]
+            text = ""
+
+    [params.search]
+        enable = false
+        type   = "pagefind"
+
+[markup.goldmark.parser.attribute]
+    block = true
+
+[markup.goldmark.extensions.passthrough]
+    enable = true
+
+    [markup.goldmark.extensions.passthrough.delimiters]
+        block  = [["$$", "$$"]]
+        inline = [["$", "$"]]

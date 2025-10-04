@@ -1,0 +1,15 @@
+{{- $wikiregex := "(^|\\s|[^\\[])\\[\\[([^\\]|]+)(?:\\|([^\\]]+))?\\]\\]" -}}
+{{- $page := .Page -}}
+{{- $content := .RawContent -}}
+
+{{- range .Content | findRE $wikiregex -}}
+    {{- $prefix := replaceRE $wikiregex "$1" . -}}
+    {{- $linkPart := replaceRE $wikiregex "$2" . -}}
+    {{- $displayPart := replaceRE $wikiregex "$3" . -}}
+    {{- $displayText := cond (eq $displayPart "") $linkPart $displayPart -}}
+
+    {{- $relref := printf "%s[%s]({{< relref \"%s\">}})" $prefix $displayText $linkPart -}}
+    {{- $content = replace $content . $relref -}}
+{{- end -}}
+
+{{- $content | markdownify -}}

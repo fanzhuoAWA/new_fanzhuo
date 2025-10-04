@@ -1,0 +1,121 @@
+<header class="sticky top-0 left-0 right-0 bg-background/80 backdrop-blur z-[var(--herm-zidx-header)]">
+    <div class="container mx-auto px-4 flex items-center justify-between h-[var(--herm-header-height)] relative">
+        {{/* Left: avatar button */}}
+        <div class="flex-1 flex justify-start">
+            <a rel="me" href="/" class="shrink-0">
+                <img src="{{ .Site.Params.author.avatar }}" alt="avatar"
+                    class="w-8 h-8 rounded-full object-cover ring-2 ring-background shadow-sm">
+            </a>
+        </div>
+
+        {{/* Mid1: menus (desktop) */}}
+        <nav class="hidden md:flex flex-shrink-0" id="header-menu" aria-label="Main navigation">
+            <ul
+                class="flex items-center bg-muted/50 backdrop-blur rounded-full px-4 h-9 gap-6 text-sm font-medium text-muted-foreground">
+                {{- $currentPage := . -}}
+                {{- range .Site.Menus.main -}}
+                <li class="relative group">
+                    <a aria-label="Menu {{ .Name }}" href="{{ .URL | absURL}}"
+                        class="hover:text-primary transition-colors">
+                        {{ .Name }}
+                    </a>
+
+                    {{- if .HasChildren -}}
+                    <ul class="flex flex-col overflow-hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 invisible 
+                       group-hover:opacity-100 group-hover:visible transition-all duration-200
+                       w-32 py-1 rounded-lg border border-border/50 backdrop-blur
+                       shadow-lg shadow-muted/5">
+                        {{- range .Children -}}
+                        <li>
+                            <a aria-label="{{ .Name }}" href="{{ .URL | absURL}}" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
+                              {{ if $currentPage.IsMenuCurrent " main" . }}text-primary bg-muted/50{{ end }}">
+                                {{- .Name -}}
+                            </a>
+                        </li>
+                        {{- end -}}
+                    </ul>
+                    {{- end -}}
+                </li>
+                {{- end -}}
+            </ul>
+        </nav>
+
+        {{/* Mid2: menus (mobile) */}}
+        <div class="md:hidden" id="header-mobilemenu">
+            {{/* Mid2.1: checkbox trick */}}
+            <input type="checkbox" id="header-mobilemenu__check" class="hidden" tabindex="-1">
+
+            {{/* Mid2.2: hamburger menu button (mobile) */}}
+            <label for="header-mobilemenu__check" id="header-mobilemenu__toggle" aria-label="Toggle menu"
+                class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full bg-background/80 text-muted-foreground/70 hover:bg-muted/50 transition-colors cursor-pointer z-[var(--herm-zidx-header)] relative"
+                role="button">
+                <span class="header-mobilemenu__toggle--open i-carbon-menu w-4 h-4" aria-hidden="true"></span>
+                <span class="header-mobilemenu__toggle--close i-carbon-close w-4 h-4" aria-hidden="true"></span>
+            </label>
+
+            {{/* Mid2.3: menu panel (mobile) */}}
+            <nav id="header-mobilemenu__panel"
+                class="fixed top-[var(--herm-header-height)] left-0 right-0 bg-background/95 backdrop-blur border-b border-border/50 z-[var(--herm-zidx-dropdown)]">
+                <div class="container max-w-container-content mx-auto px-4 py-4">
+                    <ul class="px-4 space-y-4">
+                        {{- $currentPage := . -}}
+                        {{- range .Site.Menus.main -}}
+                        <li>
+                            <a aria-label="{{ .Name }}" href="{{ .URL | absURL}}" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                    {{ if $currentPage.IsMenuCurrent " main" . }}text-primary{{ end }}">
+                                {{- .Name -}}
+                            </a>
+
+                            {{- if .HasChildren -}}
+                            <ul class="mt-2 ml-4 space-y-3">
+                                {{- range .Children -}}
+                                <li>
+                                    <a aria-label="{{ .Name }}" href="{{ .URL | absURL}}" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
+                            {{ if $currentPage.IsMenuCurrent " main" . }}text-primary{{ end }}">
+                                        {{- .Name -}}
+                                    </a>
+                                </li>
+                                {{- end -}}
+                            </ul>
+                            {{- end -}}
+                        </li>
+                        {{- end -}}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        {{/* Mid4: back2top title */}}
+        <div class="absolute left-1/2 -translate-x-1/2 opacity-0 transition-all duration-300 max-w-[50%] sm:max-w-[60%]"
+            id="header-title">
+            <button class="text-base font-medium truncate" onclick="window.scrollTo({ top: 0, behavior: 'smooth'});"
+                aria-label="返回顶部">
+                {{- .Title -}}
+            </button>
+        </div>
+
+        {{/* Right: buttons */}}
+        <div class="flex-1 flex justify-end">
+            <div class="flex items-center gap-2">
+                {{- if and .IsPage .TableOfContents -}}
+                <label for="toc-toggle" class="header-button hidden md:inline-flex" aria-label="切换目录显示" role="button">
+                    <i class="i-carbon-table-of-contents w-4 h-4"></i>
+                </label>
+                {{- end -}}
+
+                {{- if .Site.Params.search.enable -}}
+                <a href="/search" class="header-button" aria-label="搜索">
+                    <i class="i-carbon-search w-4 h-4" aria-hidden="true"></i>
+                </a>
+                {{- end -}}
+
+                <button id="header-btns__theme" class="header-button" aria-label="切换主题">
+                    <i class="i-carbon-sun w-4 h-4 block dark:hidden" aria-hidden="true"></i>
+                    <i class="i-carbon-moon w-4 h-4 hidden dark:block" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+{{- partial "utils/inlinejs.html" "global/header.js" -}}

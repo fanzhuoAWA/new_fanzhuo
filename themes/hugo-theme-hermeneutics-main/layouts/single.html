@@ -1,0 +1,42 @@
+{{- define "main" -}}
+
+{{/* TODO */}}
+<div class="container relative max-w-[var(--herm-main-width-wd)] mx-auto px-4 pt-[var(--herm-content-offset)]">
+    {{- if .TableOfContents -}}
+    {{ partial "article/toc.html" . }}
+    {{- end -}}
+
+    <div class="max-w-[var(--herm-main-width-nr)] mx-auto flex flex-col gap-y-8 h-entry">
+        <header class="space-y-6">
+            <h1 data-pagefind-meta="title" class="text-2xl md:text-3xl font-bold p-name">{{- .Title -}}</h1>
+
+            {{- if eq .Section "posts" -}}
+            {{- partial "article/metadata.html" . -}}
+            {{- end -}}
+        </header>
+
+        {{- if eq .Section "posts" -}}
+        {{- with .Params.abstract -}}
+        {{- partial "article/abstract.html" . -}}
+        {{- end -}}
+        {{- end -}}
+
+        <article data-pagefind-body class="prose e-content">
+            {{- if or .Params.wikilinks (ne .Section "posts") -}}
+            {{- partial "utils/wiki.html" . -}}
+            {{- else -}}
+            {{- .Content -}}
+            {{- end -}}
+        </article>
+
+        {{- if eq .Section "posts" -}}
+        {{- partial "article/license-card.html" . -}}
+        {{- partial "article/series-nav.html" . -}}
+        {{- end -}}
+
+        {{- partial "article/comments.html" . -}}
+    </div>
+
+    {{- partial "article/reading-progress.html" . -}}
+</div>
+{{- end -}}

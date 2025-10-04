@@ -1,0 +1,7 @@
+{{- $globalResources := slice -}}
+{{- $globalResources = $globalResources | append (resources.Match "css/global/*.css") -}}
+
+{{- with resources.Get "css/uno.css" }}{{ $globalResources = $globalResources | append . }}{{ end -}}
+{{- with resources.Get "css/custom.css" }}{{ $globalResources = $globalResources | append . }}{{ end -}}
+
+{{- partial "utils/loadcss.html" (dict "resources" $globalResources "bundleName" "css/global.bundle.css") -}}

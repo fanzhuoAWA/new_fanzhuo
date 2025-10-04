@@ -1,0 +1,9 @@
+{{- if hugo.IsProduction -}}
+    {{- $enableAnalytics := .Params.analytics | default .Site.Params.analytics.enable -}}
+    {{- if $enableAnalytics -}}
+        {{- $analyticsType := .Site.Params.analytics.type -}}
+        {{- partial (printf "global/head/analytics/%s.html" $analyticsType) . -}}
+    {{- end -}}
+{{- else -}}
+    {{- printf "Analytics is disabled in development mode." | warnf -}}
+{{- end -}}

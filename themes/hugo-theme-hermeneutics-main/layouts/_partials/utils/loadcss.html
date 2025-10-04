@@ -1,0 +1,35 @@
+{{- $resources := slice -}}
+{{- $bundleName := "css/bundle.css" -}}
+
+{{- if reflect.IsMap . -}}
+    {{- $resources = .resources -}}
+    {{- $bundleName = .bundleName | default $bundleName -}}
+{{- else -}}
+    {{/*  向后兼容  */}}
+    {{- $paths := . -}}
+    {{- if not (reflect.IsSlice .) -}}
+        {{- $paths = slice . -}}
+    {{- end -}}
+    {{- range $paths -}}
+        {{- with resources.Get . -}}
+            {{- $resources = $resources | append . -}}
+        {{- else -}}
+            {{- warnf "[loadcss.html] CSS file not found: %s" . -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if gt (len $resources) 0 -}}
+    {{- if or (eq hugo.Environment "development") (eq (len $resources) 1) -}}
+        {{- range $resources -}}
+            {{- with . | minify | fingerprint -}}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{- end -}}
+        {{- end -}}
+    {{- else -}}
+        {{- with $resources | resources.Concat $bundleName | minify | fingerprint -}}
+            <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+        {{- end -}}
+    {{- end -}}
+
+{{- end -}}

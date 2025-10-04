@@ -1,0 +1,12 @@
+<div id="article-readprog" class="
+        fixed right-4 bottom-20 md:right-8 w-12 h-12 rounded-full 
+        backdrop-blur z-50 shadow-lg border border-border/20
+        flex items-center justify-center text-sm font-medium tabular-nums
+        transition-all duration-300 opacity-0 translate-y-24
+        data-visible:opacity-100 data-visible:translate-y-0
+    " aria-label="阅读进度">
+    0%
+</div>
+
+{{- partialCached "utils/loadjs.html" (dict "src" "js/article/reading-progress.js" "defer" true)
+"js_article_reading-progress" -}}

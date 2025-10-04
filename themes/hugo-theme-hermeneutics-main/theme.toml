@@ -1,0 +1,19 @@
+description = 'But I call them all delusion —— beautiful delusion.'
+license     = 'MIT'
+licenselink = 'https://chlo.dev/chlorine/hugo-theme-hermeneutics/src/branch/main/LICENSE'
+name        = 'Hermeneutics'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://chlo.dev/chlorine/hugo-theme-hermeneutics'
+
+# If you have a running demo of the theme
+demosite = 'https://chlo.is'
+
+# Taxonomy terms
+features = ['Algolia Docsearch', 'Dark Mode', 'MinimalJS', 'Twikoo', 'UnoCSS']
+tags     = ['Blog', 'Clean', 'Landing', 'Minimal', 'Responsive', 'UnoCSS']
+
+# If the theme has a single author
+[author]
+    homepage = 'https://chlo.is'
+    name     = 'Chlorine'

@@ -1,0 +1,52 @@
+<aside class="text-sm text-muted-foreground ml-2 space-y-6">
+    <ul class="flex flex-wrap items-center gap-x-6 gap-y-2">
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-calendar w-4 h-4"></i>
+            <time class="dt-published" datetime="{{- .Date.Format " 2006-01-02T15:04:05Z07:00" -}}">
+                {{- .Date.Format "2006-01-02" -}}
+            </time>
+        </li>
+
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-time w-4 h-4"></i>
+            <span>{{- .ReadingTime }} {{ i18n "article.meta_mins_read" -}}</span>
+        </li>
+
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-text-font w-4 h-4"></i>
+            <span>{{- .WordCount }} {{ i18n "article.meta_words" -}}</span>
+        </li>
+
+        {{- if .Lastmod -}}
+        {{- if ne (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date) -}}
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-edit w-4 h-4"></i>
+            <time class="dt-updated" datetime="{{- .Lastmod.Format " 2006-01-02T15:04:05Z07:00" -}}">
+                {{- i18n "article.meta_lastmod" }} {{ .Lastmod.Format "2006-01-02" -}}
+            </time>
+        </li>
+        {{- end -}}
+        {{- end -}}
+
+        {{- with .Params.categories -}}
+        {{- range first 1 . -}}
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-folder w-4 h-4"></i>
+            <span>{{- . -}}</span>
+        </li>
+        {{- end -}}
+        {{- end -}}
+    </ul>
+
+
+    {{- with .Params.tags -}}
+    <ul class="flex flex-wrap gap-2">
+        {{- range . -}}
+        <li class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-muted rounded-md text-muted-foreground">
+            <i class="i-carbon-tag w-4 h-4" aria-hidden="true"></i>
+            <span>{{ . }}</span>
+        </li>
+        {{- end -}}
+    </ul>
+    {{- end -}}
+</aside>

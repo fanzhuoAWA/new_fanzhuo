@@ -1,0 +1,6 @@
+{
+	"files": {
+		"include": ["assets/**/*.css"],
+		"ignore": ["assets/**/uno.css"]
+	}
+}

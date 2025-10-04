@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{- if .IsHome -}}{{- site.Title -}}{{- else -}}{{- printf "%s | %s" .Title site.Title -}}{{- end -}}</title>
+
+{{- with .Description | default site.Params.description -}}
+<meta name="description" content="{{ . }}">
+{{- end -}}
+{{- with .Keywords | default site.Params.keywords -}}
+<meta name="keywords" content="{{ delimit . " ," }}">
+{{- end -}}
+{{- with site.Author.name -}}
+<meta name="author" content="{{ . }}">
+{{- end -}}
+
+{{- if .Site.LanguageCode -}}
+<link rel="alternate" hreflang="{{ .Site.LanguageCode }}" href="{{ .Permalink }}" />
+{{- end -}}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+
+{{- partial "opengraph.html" . -}}
+{{- partial "twitter_cards.html" . -}}

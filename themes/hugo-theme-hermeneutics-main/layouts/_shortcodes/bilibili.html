@@ -1,0 +1,74 @@
+{{- $bvid := .Get "bv" -}}
+{{- $apiUrl := printf "https://api.bilibili.com/x/web-interface/view?bvid=%s" $bvid -}}
+
+{{- $headers := dict "Accept" "application/json" -}}
+{{- $videoData := resources.GetRemote $apiUrl $headers -}}
+
+{{- if not $videoData -}}
+    <p class="text-red-500">无法加载 Bilibili 视频数据：BV号 "{{ $bvid }}" 无效或网络错误。</p>
+{{- else -}}
+    {{- $videoJson := $videoData | transform.Unmarshal -}}
+    {{- if not $videoJson.data -}}
+        <p class="text-red-500">Bilibili API 返回数据无效，请检查 BV号 "{{ $bvid }}"。</p>
+    {{- else -}}
+        {{- $data := $videoJson.data -}}
+        {{- $timestamp := int $data.pubdate -}}
+        {{- $pubTime := $timestamp | time.AsTime -}}
+
+        <div class="p-4 sm:p-6 rounded-xl backdrop-blur
+            shadow-sm shadow-muted/10
+            ring-1 ring-muted/20
+            transition duration-300
+            hover:ring-muted/30 hover:shadow-md hover:shadow-muted/30">
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div
+                    class="w-full sm:w-40 h-36 sm:h-24 rounded-lg overflow-hidden ring-1 ring-black/5 dark:ring-white/5 flex-shrink-0 mx-auto sm:mx-0">
+                    <img src="{{- $data.pic -}}" alt="{{- $data.title -}}"
+                        class="w-full h-full object-cover transition duration-300 pointer-events-none" loading="lazy"
+                        referrerpolicy="no-referrer">
+                </div>
+
+                <div class="flex-1 min-w-0 mt-2 sm:mt-0">
+                    <a href="https://www.bilibili.com/video/{{- $bvid -}}" target="_blank" rel="noopener noreferrer" class="block text-base sm:text-lg font-medium text-foreground hover:text-primary 
+                        transition-colors line-clamp-2">
+                        {{- $data.title -}}
+                    </a>
+                    <a href="https://space.bilibili.com/{{- int $data.owner.mid -}}" target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-2 inline-flex items-center gap-1.5 text-sm text-muted-foreground/70 hover:text-primary transition-colors">
+                        <div class="i-carbon-user-avatar w-4 h-4"></div>
+                        <span>{{- $data.owner.name -}}</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-foreground/60">
+                <div class="inline-flex items-center gap-1.5" title="播放量">
+                    <div class="i-carbon-play w-4 h-4"></div>
+                    <span class="tabular-nums">{{- partial "utils/format-count.html" $data.stat.view -}}</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5" title="点赞数">
+                    <div class="i-carbon-thumbs-up w-4 h-4"></div>
+                    <span class="tabular-nums">{{- partial "utils/format-count.html" $data.stat.like -}}</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5" title="投币数">
+                    <div class="i-carbon-currency w-4 h-4"></div>
+                    <span class="tabular-nums">{{- partial "utils/format-count.html" $data.stat.coin -}}</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5" title="收藏数">
+                    <div class="i-carbon-favorite w-4 h-4"></div>
+                    <span class="tabular-nums">{{- partial "utils/format-count.html" $data.stat.favorite -}}</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5" title="弹幕数">
+                    <div class="i-carbon-chat w-4 h-4"></div>
+                    <span class="tabular-nums">{{- partial "utils/format-count.html" $data.stat.danmaku -}}</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5" title="发布时间">
+                    <div class="i-carbon-time w-4 h-4"></div>
+                    <span class="tabular-nums">{{- $pubTime.Format "2006-01-02" -}}</span>
+                </div>
+            </div>
+        </div>
+    {{- end -}}
+{{- end -}}

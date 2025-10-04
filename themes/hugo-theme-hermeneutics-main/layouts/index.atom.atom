@@ -1,0 +1,44 @@
+{{- printf "<?xml version= \"1.0\" encoding= \"utf-8\"?>" | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  {{- $limit := .Site.Params.feed.atom.limit | default 10 -}}
+  {{- $posts := first $limit (where site.RegularPages "Section" "posts") -}}
+  
+  <title>{{- if eq .Title site.Title -}}{{- site.Title -}}{{- else -}}{{- with .Title -}}{{ . }} - {{- end -}}{{- site.Title -}}{{- end }}</title>
+  <link href="{{ .Permalink }}" rel="alternate" />
+  {{ with .OutputFormats.Get "Atom" -}} <link href="{{ .Permalink }}" rel="self" type="{{ .MediaType.Type }}" /> {{- end }} <id>{{ .Permalink }}</id>
+  <updated>{{ with (index $posts 0).Lastmod }}{{ .Format "2006-01-02T15:04:05Z07:00" }}{{ else }}{{ (index $posts 0).Date.Format "2006-01-02T15:04:05Z07:00" }}{{ end }}</updated>
+  {{ with site.Params.author.name -}} <author><name>{{ . }}</name></author> {{- end }}
+  <rights>{{ replace site.Copyright "{year}" now.Year }}</rights>
+  <generator>Hugo -- The best static site generator</generator> 
+  {{ if .Site.Params.feed.folo.enable -}}
+  <follow_challenge>
+    <feedId>{{ .Site.Params.feed.folo.feedId }}</feedId>
+    <userId>{{ .Site.Params.feed.folo.userId }}</userId>
+  </follow_challenge>
+  {{- end }}
+  
+  {{- range $posts }}
+  <entry>
+    <title>{{ .Title }}</title>
+    <link href="{{ .Permalink }}" />
+    <id>{{ .Permalink }}</id>
+    <updated>{{ with .Lastmod }}{{ .Format "2006-01-02T15:04:05Z07:00" }}{{ else }}{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}{{ end }}</updated>
+    {{ with site.Params.author.name -}}<author><name>{{ . }}</name></author> {{- end }}
+    {{ with .Params.tags }} 
+    <category term="{{ delimit . " ," }}" /> {{ end }}
+    <summary type="html">{{ with .Description }}{{ . | html }}{{ else }}{{ .Summary | html }}{{ end }}</summary>
+    <content type="html">
+      {{ `<![CDATA[` | safeHTML }}
+      {{- if .Params.featuredImage }}
+      <figure>
+        <img src="{{ .Params.featuredImage | absURL }}" alt="{{ .Title }}" />
+        {{- with .Params.featuredImageCaption }}
+        <figcaption>{{ . }}</figcaption>
+        {{- end }}
+      </figure>
+      {{- end }}
+      {{ if site.Params.feed.atom.fullText }}{{ .Content }}{{ else }}{{ .Summary }}{{ end }}
+      {{ `]]>` | safeHTML }}
+    </content>
+  </entry> {{- end }}
+</feed>

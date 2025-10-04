@@ -1,0 +1,14 @@
+<div class="flex flex-col md:flex-row items-center gap-y-2
+            md:divide-x md:divide-gray-300/60 md:dark:divide-gray-600/60">
+
+    {{- with .Site.Params.beian.icp -}}
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer"
+        class="gap-1.5 hover:text-primary transition-colors px-2">{{ .text }}</a>
+    {{- end -}}
+
+    {{- with .Site.Params.beian.mps -}}
+    <a href="https://beian.mps.gov.cn/#/query/webSearch?code={{- .num -}}" target="_blank" rel="noopener noreferrer"
+        class="gap-1.5 hover:text-primary transition-colors px-2">{{ .text }}
+    </a>
+    {{- end -}}
+</div>

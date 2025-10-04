@@ -1,0 +1,83 @@
+{{ with .Params.series }}
+{{ $series := . }}
+{{ $currentPage := $.Page }}
+
+<!-- 获取同系列的所有文章并按日期排序 -->
+{{ $seriesPages := where $.Site.RegularPages "Params.series" $series }}
+{{ $sortedPages := $seriesPages.ByDate }}
+
+<!-- 找到当前文章在系列中的位置 -->
+{{ $currentIndex := 0 }}
+{{ range $index, $page := $sortedPages }}
+{{ if eq $page $currentPage }}
+{{ $currentIndex = $index }}
+{{ end }}
+{{ end }}
+
+<!-- 获取上一篇和下一篇 -->
+{{ $prevPage := index $sortedPages (sub $currentIndex 1) }}
+{{ $nextPage := index $sortedPages (add $currentIndex 1) }}
+
+<div class="p-6 md:p-8 rounded-xl border border-border/40 backdrop-blur bg-muted/20">
+    <div class="space-y-6">
+        <!-- 系列标题 -->
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <div class="i-carbon-notebook w-4 h-4 text-primary"></div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-medium">系列文章</h3>
+                    <a href="/series/{{ $series }}" class="text-xs text-muted-foreground">{{ $series }}</a>
+                </div>
+            </div>
+            <span class="px-2 py-1 text-xs bg-muted/50 rounded-md text-muted-foreground">
+                {{ add $currentIndex 1 }}/{{ len $sortedPages }}
+            </span>
+        </div>
+
+        <!-- 当前位置指示器 -->
+        <div class="w-full bg-muted/50 rounded-full h-1.5">
+            <div class="bg-primary/70 h-1.5 rounded-full transition-all duration-300"
+                style="width: {{ div (mul (add $currentIndex 1) 100) (len $sortedPages) }}%"></div>
+        </div>
+
+        <!-- 导航链接 -->
+        {{ if or $prevPage $nextPage }}
+        <div class="grid grid-cols-1 {{ if and $prevPage $nextPage }}sm:grid-cols-2{{ end }} gap-4">
+            {{ with $prevPage }}
+            <a href="{{ .RelPermalink }}"
+                class="group flex items-center gap-3 p-4 rounded-lg border border-border/30 hover:border-border/60 transition-all duration-200 hover:bg-muted/30">
+                <div
+                    class="w-8 h-8 rounded-lg bg-muted/50 flex items-center justify-center group-hover:bg-muted/70 transition-colors">
+                    <div class="i-carbon-arrow-left w-4 h-4 text-muted-foreground"></div>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="text-xs text-muted-foreground mb-1">上一篇</div>
+                    <h4 class="text-sm font-medium line-clamp-1 group-hover:text-primary/80 transition-colors">
+                        {{ .Title }}
+                    </h4>
+                </div>
+            </a>
+            {{ end }}
+
+            {{ with $nextPage }}
+            <a href="{{ .RelPermalink }}"
+                class="group flex items-center gap-3 p-4 rounded-lg border border-border/30 hover:border-border/60 transition-all duration-200 hover:bg-muted/30 {{ if not $prevPage }}sm:col-start-2{{ end }}">
+                <div class="flex-1 min-w-0 text-right">
+                    <div class="text-xs text-muted-foreground mb-1">下一篇</div>
+                    <h4 class="text-sm font-medium line-clamp-1 group-hover:text-primary/80 transition-colors">
+                        {{ .Title }}
+                    </h4>
+                </div>
+                <div
+                    class="w-8 h-8 rounded-lg bg-muted/50 flex items-center justify-center group-hover:bg-muted/70 transition-colors">
+                    <div class="i-carbon-arrow-right w-4 h-4 text-muted-foreground"></div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

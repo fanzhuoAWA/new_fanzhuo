@@ -1,0 +1,73 @@
+{{- $path := .Get 0 | default "friends.friend" -}}
+{{- $pathParts := split $path "." -}}
+{{- $data := .Site.Data -}}
+{{- range $pathParts -}}
+{{- $data = index $data . -}}
+{{- end -}}
+{{- $friends := $data -}}
+
+<style>
+    .friends-wrapper .friend-card {
+        border: 1px solid var(--herm-border) !important;
+    }
+
+    .friends-wrapper .friend-card:hover {
+        border: 1px solid var(--herm-border) !important;
+    }
+</style>
+
+<div class="friends-wrapper">
+    <ul class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 list-none! p-0!">
+        {{- range $friends -}}
+        <li class="group">
+            <a href="{{- .url -}}" target="_blank" rel="noopener noreferrer"
+                aria-labelledby="friend-name-{{ .name | urlize }}" aria-describedby="friend-des-{{ .name | urlize }}"
+                class="friend-card relative flex h-full flex-col items-center
+                  rounded-2xl p-4 bg-card
+                  transition-all duration-200
+                  hover:bg-zinc-100 hover:shadow-md
+                  dark:hover:bg-zinc-800">
+
+                <div class="mt-3 mb-2 flex-shrink-0 w-16 h-16 rounded-full overflow-hidden">
+                    {{- if .ava -}}
+                    <img src="{{- .ava -}}" alt="{{- .name -}}'s avatar"
+                        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 no-lightbox">
+                    {{- else -}}
+                    <div class="flex h-full w-full items-center justify-center bg-zinc-200 dark:bg-zinc-700"
+                        aria-hidden="true">
+                        <span class="text-xl font-semibold text-card-foreground/75">{{- substr .name 0 1 -}}</span>
+                    </div>
+                    {{- end -}}
+                </div>
+
+                <div class="flex w-full flex-grow flex-col justify-between text-center">
+                    <div>
+                        <div id="friend-name-{{ .name | urlize }}" class="font-medium text-card-foreground/70">
+                            {{- .name -}}
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </div>
+                        <p id="friend-des-{{ .name | urlize }}" class="px-1 text-sm text-muted-foreground line-clamp-2">
+                            {{- .des -}}
+                        </p>
+                    </div>
+
+                    {{- with .note -}}
+                    <div class="mt-2 flex items-center justify-center gap-1.5 text-xs text-muted-foreground"
+                        aria-hidden="true">
+                        <i class="i-carbon-notebook opacity-70"></i>
+                        <span>{{- . -}}</span>
+                    </div>
+                    {{- end -}}
+                </div>
+
+                {{- with .room -}}
+                <div class="absolute top-2.5 left-2.5 px-1.5 py-0.5 text-xs rounded-full bg-zinc-200/70 dark:bg-zinc-800/70 text-card-foreground"
+                    aria-hidden="true">
+                    <span class="font-medium tracking-tight">{{- . -}}</span>
+                </div>
+                {{- end -}}
+            </a>
+        </li>
+        {{- end -}}
+    </ul>
+</div>

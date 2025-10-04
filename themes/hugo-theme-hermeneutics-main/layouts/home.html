@@ -1,0 +1,11 @@
+{{- define "main" -}}
+
+{{- if .Site.Params.announcement | default false -}}
+{{- partial "home/announcement.html" . -}}
+{{- end -}}
+
+{{- partial "home/hero.html" . -}}
+
+{{- partial "home/recent-posts.html" . -}}
+
+{{- end -}}

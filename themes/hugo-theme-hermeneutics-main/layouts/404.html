@@ -1,0 +1,42 @@
+{{- define "main" -}}
+<div class="flex flex-col items-center justify-center min-h-[70vh] text-center px-4 pt-24">
+    <div class="relative mb-8">
+        <span class="text-9xl md:text-[12rem] font-light text-primary/20 select-none" aria-hidden="true">
+            404
+        </span>
+        <h1
+            class="absolute inset-0 flex items-center justify-center text-6xl md:text-8xl font-medium text-primary z-10">
+            404
+        </h1>
+    </div>
+
+    <p class="text-2xl md:text-3xl font-medium text-foreground mb-4">{{ i18n "404.title" }}</p>
+    <p class="text-muted-foreground max-w-md leading-relaxed mb-12">
+        {{ i18n "404.desc" | safeHTML }}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 mb-16">
+        <a href="/" class="group inline-flex items-center px-8 py-4 rounded-xl bg-primary !text-background
+                  hover:bg-primary/90 hover:-translate-y-1 transition-all duration-300
+                  shadow-lg hover:shadow-xl
+                  transform">
+            <div class="i-carbon-home w-5 h-5 mr-3 group-hover:scale-110 transition-transform"></div>
+            <span class="font-medium">{{ i18n "404.gohome" }}</span>
+        </a>
+
+        <a href="/posts" class="group inline-flex items-center px-8 py-4 rounded-xl border border-border/40 
+                  hover:bg-primary/5 transition-all duration-300 
+                  shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <div class="i-carbon-document w-5 h-5 mr-3 group-hover:scale-110 transition-transform"></div>
+            <span class="font-medium">{{ i18n "404.posts" }}</span>
+        </a>
+    </div>
+
+    <div class="max-w-2xl mx-auto p-8 rounded-2xl border border-border/30 backdrop-blur bg-muted/20">
+        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <div class="i-carbon-quotes w-5 h-5 text-primary"></div>
+        </div>
+        {{- partial "components/random-quote.html" . -}}
+    </div>
+</div>
+{{- end -}}

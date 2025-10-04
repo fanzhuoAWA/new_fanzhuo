@@ -1,0 +1,85 @@
+/* 页面内容淡入动画 */
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.anim-fadein {
+	animation: fadein 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* 渐显动画 */
+@keyframes fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.anim-fade-up {
+	animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-left {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.anim-fade-left {
+	animation: fade-left 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+/* 浮动动画 */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(-4px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+}
+
+.anim-float {
+	animation: float 2.5s ease-in-out infinite;
+}
+
+/* 文字 reveal 动画 */
+@keyframes text-reveal {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.anim-text-reveal {
+	display: inline-block;
+	opacity: 0;
+	animation: text-reveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	animation-delay: calc(0.05s * var(--index));
+}

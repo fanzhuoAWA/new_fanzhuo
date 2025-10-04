@@ -1,0 +1,11 @@
+{{ $enableComments := .Params.comment | default .Site.Params.comments.enable }}
+{{ if $enableComments }}
+{{ $commentType := .Site.Params.comments.type }}
+<div class="mt-8 md:mt-12 pt-4 md:pt-8 border-t border-border/40">
+    <div class="flex items-center gap-2 mb-8 mx-2">
+        <div class="i-carbon-chat w-5 h-5 text-primary/80"></div>
+        <h2 class="text-lg font-medium">评论</h3>
+    </div>
+    {{ partial (printf "article/comments/%s.html" $commentType) . }}
+</div>
+{{ end }}

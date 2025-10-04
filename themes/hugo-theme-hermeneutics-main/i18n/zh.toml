@@ -1,0 +1,29 @@
+main = "主要内容区域"
+
+[home]
+    announcement       = "公告"
+    announcement_close = "关闭公告"
+
+[posts]
+    pinned   = "置顶"
+    readmore = "阅读更多"
+
+[article]
+    abstract       = "AI 摘要"
+    abstract_bot   = "我的 AI 助手"
+    license        = "许可协议"
+    meta_lastmod   = "更新于"
+    meta_mins_read = "分钟阅读"
+    meta_words     = "字"
+    ori_link       = "原文链接"
+    toc            = "目录"
+
+[search]
+    desc  = "这是搜索界面的描述。"
+    title = "搜索"
+
+[404]
+    desc   = "您正在寻找的页面不存在。"
+    gohome = "返回首页"
+    posts  = "浏览文章"
+    title  = "页面未找到"

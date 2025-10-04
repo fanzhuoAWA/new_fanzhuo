@@ -1,0 +1,68 @@
+{{- $limit := .Site.Params.feed.jsonfeed.limit | default 10 -}}
+{{- $posts := first $limit (where site.RegularPages "Section" "posts") -}}
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": {{ site.Title | jsonify }},
+    "home_page_url": {{ site.BaseURL | jsonify }},
+    "feed_url": {{ with .OutputFormats.Get "jsonfeed" }}{{ .Permalink | jsonify }}{{ else }}{{ printf "%sfeed.json" site.BaseURL | jsonify }}{{ end }},
+    {{- with site.Params.description }}
+    "description": {{ . | jsonify }},
+    {{- end }}
+    "icon": {{ printf "%s/favicon.svg" site.BaseURL | jsonify }},
+    {{- with site.Params.author }}
+    "author": {
+        "name": {{ .name | jsonify }}
+        {{- with .homepage }},
+        "url": {{ . | jsonify }}
+        {{- end }}
+        {{- with .avatar }},
+        "avatar": {{ (. | absURL) | jsonify }}
+        {{- end }}
+    },
+    {{- end }}
+    {{- with site.LanguageCode }}
+    "language": {{ . | jsonify }},
+    {{- end }}
+    {{- if .Site.Params.feed.folo.enable }}
+    "follow_challenge": {
+        "feed_id": "{{ .Site.Params.feed.folo.feedId }}",
+        "user_id": "{{ .Site.Params.feed.folo.userId }}"
+    },
+    {{- end }}
+    "items": [
+        {{- range $index, $post := $posts }}
+        {{- if $index }},{{ end }}
+        {
+            "id": {{ .Permalink | jsonify }},
+            "url": {{ .Permalink | jsonify }},
+            "title": {{ .Title | jsonify }},
+            {{- with .Description }}
+            "summary": {{ . | jsonify }},
+            {{- else }}
+            "summary": {{ .Summary | plainify | jsonify }},
+            {{- end }}
+            {{- if site.Params.feed.jsonfeed.fullText }}
+            "content_html": {{ .Content | jsonify }},
+            {{- else }}
+            "content_text": {{ .Summary | plainify | jsonify }},
+            {{- end }}
+            "date_published": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+            "date_modified": {{ with .Lastmod }}{{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }}{{ else }}{{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }}{{ end }}
+            {{- with .Params.tags }},
+            "tags": {{ . | jsonify }}
+            {{- end }}
+            {{- with .Params.featuredImage }},
+            "image": {{ (. | absURL) | jsonify }}
+            {{- end }}
+            {{- with site.Params.author }},
+            "author": {
+                "name": {{ .name | jsonify }}
+                {{- with .homepage }},
+                "url": {{ . | jsonify }}
+                {{- end }}
+            }
+            {{- end }}
+        }
+        {{- end }}
+    ]
+}

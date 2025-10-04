@@ -1,0 +1,12 @@
+{{ $text := .text }}
+{{ $start := cond (isset . "startIndex") .startIndex 0 }}
+{{ $class := cond (isset . "class") .class "anim-text-reveal" }}
+
+<span class="inline-flex flex-wrap gap-[0.05rem]">
+    {{ $runes := split $text "" }}
+    {{ range $i, $char := $runes }}
+    {{ $isSpace := eq $char " " }}
+    <span class="{{ $class }}" style="--index: {{ add $start $i }};">{{ if $isSpace }}&nbsp;{{ else }}{{ $char }}{{ end
+        }}</span>
+    {{ end }}
+</span>

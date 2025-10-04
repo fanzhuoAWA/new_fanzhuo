@@ -1,0 +1,54 @@
+<section class="h-[calc(100vh-var(--herm-header-height))] flex items-center" aria-label="hero">
+    {{/* 非常不优雅，但能用 */}}
+    <div class="container max-w-[var(--herm-main-width)] mx-auto px-4">
+        <div flex="~ col-reverse lg:row" gap="12 lg:24"
+            class="items-center lg:justify-between -translate-y-[calc(var(--herm-header-height)/2)]">
+            <div text="center lg:left" class="w-full lg:flex-1 lg:max-w-2xl space-y-6">
+                <h1 text="2xl lg:4xl" font="bold">
+                    {{- partial "home/floating-text.html" (dict
+                    "text" (printf "Hi, I'm %s 🎉" .Site.Params.Author.name)
+                    "startIndex" 0
+                    "class" "anim-text-reveal"
+                    ) -}}
+                </h1>
+
+                <ul class="flex flex-wrap justify-center lg:justify-start gap-2.5">
+                    {{- with .Site.Params.author.tags -}}
+                    {{- range $index, $tag := . -}}
+                    <li p="x-3 y-1" text="sm muted-foreground/80" class="rounded-full bg-muted/50
+                            anim-fade-up opacity-0 delayed-animation"
+                        style="--anim-delay: {{- add 0.5 (mul $index 0.1) -}}s">
+                        {{- $tag -}}
+                    </li>
+                    {{- end -}}
+                    {{- end -}}
+                </ul>
+
+                {{- with .Site.Params.author.bio -}}
+                <p text="base lg:lg muted-foreground/70" class="anim-fade-up opacity-0 delayed-animation"
+                    style="--anim-delay: 0.8s">
+                    {{- . -}}
+                </p>
+                {{- end -}}
+
+                {{- partial "home/social.html" . -}}
+            </div>
+
+            <div w="48 lg:64" h="48 lg:64" border="2 background"
+                class="rounded-full overflow-hidden flex-shrink-0 shadow-xl anim-fade-left opacity-0 delayed-animation"
+                style="--anim-delay: 0.6s;">
+                <img src="{{- .Site.Params.author.avatar -}}" alt="avatar of {{- .Site.Params.author.name -}}"
+                    class="object-cover rounded-full" width="256" height="256" loading="lazy">
+            </div>
+        </div>
+
+        <div class="hidden md:flex absolute bottom-12 left-1/2 -translate-x-1/2 anim-fade-up opacity-0 delayed-animation"
+            style="--anim-delay: 1.5s">
+            <a href="#recent-posts" aria-label="Scroll down to recent posts"
+                text="muted-foreground/50 hover:muted-foreground/80"
+                class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-muted/50 transition-colors duration-300">
+                <i w="6" h="6" class="i-carbon-arrow-down anim-float"></i>
+            </a>
+        </div>
+    </div>
+</section>

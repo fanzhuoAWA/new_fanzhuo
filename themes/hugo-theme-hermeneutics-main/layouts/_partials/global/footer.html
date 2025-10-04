@@ -1,0 +1,17 @@
+<footer border="t border/50" class="mt-auto py-4 backdrop-blur">
+    <div m="x-auto" p="x-4" flex="~ col" gap="6" class="container">
+        <div text="sm muted-foreground/70" gap="3" m="t-3" class="hidden md:flex items-center">
+            {{- partial "global/footer/runtime.html" . -}}
+            <span w="1" h="1" rounded="full" bg="muted-foreground/30"></span>
+            {{- partial "global/footer/wowbook.html" . -}}
+        </div>
+
+        <div text="sm muted-foreground/60" flex="~ col md:row" gap="3" class="items-center justify-between">
+            {{- partial "global/footer/techstack.html" . -}}
+            {{- partial "global/footer/webring.html" . -}}
+            {{- if .Site.Params.beian.enable -}}
+            {{- partial "global/footer/beian.html" . -}}
+            {{- end -}}
+        </div>
+    </div>
+</footer>

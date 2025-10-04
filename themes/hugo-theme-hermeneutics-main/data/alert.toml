@@ -1,0 +1,31 @@
+default = "note"
+
+[note]
+    bg     = "bg-blue-50/50 dark:bg-blue-500/10"
+    border = "border-blue-500"
+    icon   = "i-carbon-information"
+    text   = "text-blue-700 dark:text-blue-300"
+
+[tip]
+    bg     = "bg-green-50/50 dark:bg-green-500/10"
+    border = "border-green-500"
+    icon   = "i-carbon-idea"
+    text   = "text-green-700 dark:text-green-300"
+
+[important]
+    bg     = "bg-purple-50/50 dark:bg-purple-500/10"
+    border = "border-purple-500"
+    icon   = "i-carbon-star"
+    text   = "text-purple-700 dark:text-purple-300"
+
+[warning]
+    bg     = "bg-amber-50/50 dark:bg-amber-500/10"
+    border = "border-amber-500"
+    icon   = "i-carbon-warning"
+    text   = "text-amber-700 dark:text-amber-300"
+
+[caution]
+    bg     = "bg-red-50/50 dark:bg-red-500/10"
+    border = "border-red-500"
+    icon   = "i-carbon-warning-alt"
+    text   = "text-red-700 dark:text-red-300"

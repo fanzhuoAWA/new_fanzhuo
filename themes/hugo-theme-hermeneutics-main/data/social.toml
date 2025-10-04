@@ -1,0 +1,57 @@
+# Basic (We all need these, I think)
+[[social]]
+    color = "#4A90E2"
+    icon  = "i-carbon-home"
+    name  = "Home"
+    rel   = ""
+    url   = "/"
+
+[[social]]
+    color = "#EA4335"
+    icon  = "i-carbon-email"
+    name  = "Email"
+    rel   = ""
+    url   = "mailto:fan_zhuo@outlook.com"
+
+[[social]]
+    color = "#EE802F"
+    icon  = "i-carbon-rss"
+    name  = "Atom Feed"
+    rel   = ""
+    url   = "/feed.atom"
+
+# Dev Platforms
+[[social]]
+    color = "#181717"
+    icon  = "i-carbon-logo-github"
+    name  = "GitHub"
+    rel   = ""
+    url   = "https://github.com/fanzhuoAWA"
+
+[[social]]
+    color = "#1DA1F2"
+    icon  = "i-carbon-logo-twitter"
+    name  = "Twitter/X"
+    rel   = ""
+    url   = "https://x.com/fanzhuoW"
+
+[[social]]
+    color = "#00A1D6"
+    icon  = "i-simple-icons-bilibili"
+    name  = "Bilibili"
+    rel   = ""
+    url   = "https://space.bilibili.com/1269272961"
+
+[[social]]
+    color = "#FFCC00"
+    icon  = "i-carbon-logo-qq"
+    name  = "QQ"
+    rel   = ""
+    url   = "https://qm.qq.com/q/OIIUabbTOK"
+
+[[social]]
+    color = "#8E6EDF"
+    icon  = "i-simple-icons-afdian"
+    name  = "Afdian"
+    rel   = ""
+    url   = "https://afdian.com/a/fanzhuo"

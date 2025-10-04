@@ -1,0 +1,9 @@
+{{- partial "global/head/meta.html" . -}}
+{{- partialCached "global/head/icons.html" . "global_head_icons" -}}
+{{- partialCached "global/head/styles.html" . "global_head_styles" -}}
+{{- partialCached "global/head/scripts.html" . "global_head_scripts" -}}
+{{- partial "global/head/conditional.html" . -}}
+{{- partialCached "global/head/analytics.html" . "global_head_analytics" -}}
+{{- if templates.Exists "partials/global/extended-head.html" -}}
+  {{- partial "global/extended-head.html" . -}}
+{{- end -}}

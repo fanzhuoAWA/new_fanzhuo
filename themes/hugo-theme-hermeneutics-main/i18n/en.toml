@@ -1,0 +1,29 @@
+main = "Main area"
+
+[home]
+    announcement       = "Announcement"
+    announcement_close = "Close announcement"
+
+[posts]
+    pinned   = "Pinned"
+    readmore = "Read More"
+
+[article]
+    abstract       = "Abstract"
+    abstract_bot   = "My AI Bot"
+    license        = "License"
+    meta_lastmod   = "Updated on"
+    meta_mins_read = "mins read"
+    meta_words     = "words"
+    ori_link       = "Original Link"
+    toc            = "Table of Contents"
+
+[search]
+    desc  = "This is the description of the search interface."
+    title = "Search"
+
+[404]
+    desc   = "The party would like to remind you that the page you're looking for never exists."
+    gohome = "Go Back Home"
+    posts  = "View Posts"
+    title  = "Page Not Found"

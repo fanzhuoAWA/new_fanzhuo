@@ -1,0 +1,14 @@
+{{- if not .IsHome -}}
+{{- $pageResources := resources.Match "css/article/*.css" -}}
+{{- partialCached "utils/loadcss.html" 
+(dict "resources" $pageResources 
+"bundleName" "css/article.bundle.css" ) "css_article" -}} 
+{{- partialCached "utils/loadjs.html" (dict "src" "js/article/lightbox.js" "defer" true) "js_article_lightbox" -}}
+{{- partialCached "utils/loadjs.html" (dict "src" "js/article/clickcopy.js" "defer" true) "js_article_clickcopy" -}}
+{{- end -}}
+
+{{- $noop := .WordCount -}}
+{{- if .Page.Store.Get "hasMath" -}}
+<link rel="stylesheet" href="{{ printf "%s/npm/katex@0.16.22/dist/katex.min.css" .Site.Params.cdn.jsd }}"
+  integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous" />
+{{- end -}}

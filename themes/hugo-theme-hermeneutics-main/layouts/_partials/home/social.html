@@ -1,0 +1,19 @@
+<ul class="grid grid-cols-5 max-lg:justify-center lg:flex place-items-center gap-3 list-none p-0">
+    {{ range $index, $social := .Site.Data.social.social }}
+    <li class="anim-fade-up opacity-0 delayed-animation" style="--anim-delay: {{ add 0.8 (mul $index 0.1) }}s;">
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer {{ .rel }}"
+            aria-label="{{ .name }}"
+            class="relative flex items-center justify-center hover:opacity-80 !text-white p-2.5 rounded-full group"
+            style="background: {{ .color }}">
+
+            <i class="{{ .icon }} w-5 h-5" aria-hidden="true"></i>
+
+            <span
+                class="absolute left-1/2 top-[110%] -translate-x-1/2 -translate-y-2 bg-opacity-95 text-foreground px-3 py-1 rounded text-sm whitespace-nowrap opacity-0 pointer-events-none transition-all duration-200 z-10 font-500 group-hover:opacity-100 group-hover:translate-y-2"
+                role="tooltip">
+                {{ .name }}
+            </span>
+        </a>
+    </li>
+    {{ end }}
+</ul>

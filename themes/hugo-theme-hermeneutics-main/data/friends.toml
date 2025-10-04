@@ -1,0 +1,23 @@
+[[friend]]
+    ava  = "https://img.chlo.is/avatar/02.webp"
+    des  = "An Element-chan who writes."
+    name = "Chlorine"
+    note = "主题作者"
+    room = "408A"
+    url  = "https://chlo.is"
+
+[[friend]]
+    ava  = "https://www.cursor.com/favicon.ico"
+    des  = "The AI Code Editor"
+    name = "Cursor"
+    note = "主题的另一个「作者」"
+    room = "000A"
+    url  = "https://www.cursor.com"
+
+[[friend]]
+    ava  = "https://ui-avatars.com/api/?name=John+Doe&size=128"
+    des  = "你的描述"
+    name = "John Doe"
+    note = "你的备注"
+    room = "000A"
+    url  = "https://example.com"

@@ -1,0 +1,6 @@
+# Many modern webrings no longer have previous/next navigation. 
+# However, I might add support for it later.  
+
+[[webring]]
+    text = "Webring1"
+    href = "https://awesomewebring.org/"

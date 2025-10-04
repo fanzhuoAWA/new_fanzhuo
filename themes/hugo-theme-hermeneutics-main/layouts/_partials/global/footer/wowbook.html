@@ -1,0 +1,23 @@
+{{- $totalWord := 0 -}}
+{{- range .Site.RegularPages -}}
+{{- $totalWord = add $totalWord .WordCount -}}
+{{- end -}}
+{{- $wowWord := div $totalWord 10000 -}}
+
+{{- $wowBook := "还在努力更新中..加油！加油啦" -}}
+{{- $wowbooks := .Site.Data.wowbook -}}
+
+{{- $wowBook := "" -}}
+{{- range $wowbooks -}}
+    {{- if and (not $wowBook) (ge $wowWord .words) -}}
+        {{- $wowBook = .text -}}
+    {{- end -}}
+{{- end -}}
+
+<div class="flex items-center gap-2">
+    <i class="i-carbon-text-font w-4 h-4"></i>
+    <span>
+        共 <span class="tabular-nums font-mono">{{- $totalWord -}}</span> 字，
+        {{- $wowBook | safeHTML -}}
+    </span>
+</div>
