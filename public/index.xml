@@ -1,40 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Fanzhuo&#39;s Blog</title>
-    <link>http://localhost:10263/</link>
-    <description>Recent content on Fanzhuo&#39;s Blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 04 Oct 2025 20:08:45 +0800</lastBuildDate>
-    <atom:link href="http://localhost:10263/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>搜索</title>
-      <link>http://localhost:10263/search/</link>
-      <pubDate>Sat, 04 Oct 2025 20:08:45 +0800</pubDate>
-      <guid>http://localhost:10263/search/</guid>
-      <description>&lt;p&gt;咕咕咕咕咕……&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>朋友</title>
-      <link>http://localhost:10263/friends/</link>
-      <pubDate>Sat, 04 Oct 2025 19:47:01 +0800</pubDate>
-      <guid>http://localhost:10263/friends/</guid>
-      <description>&lt;style&gt;&#xA;    .friends-wrapper .friend-card {&#xA;        border: 1px solid var(--herm-border) !important;&#xA;    }&#xA;&#xA;    .friends-wrapper .friend-card:hover {&#xA;        border: 1px solid var(--herm-border) !important;&#xA;    }&#xA;&lt;/style&gt;&#xA;&#xA;&lt;div class=&#34;friends-wrapper&#34;&gt;&#xA;    &lt;ul class=&#34;grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 list-none! p-0!&#34;&gt;&lt;li class=&#34;group&#34;&gt;&#xA;            &lt;a href=&#34;https://chlo.is&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&#xA;                aria-labelledby=&#34;friend-name-chlorine&#34; aria-describedby=&#34;friend-des-chlorine&#34;&#xA;                class=&#34;friend-card relative flex h-full flex-col items-center&#xA;                  rounded-2xl p-4 bg-card&#xA;                  transition-all duration-200&#xA;                  hover:bg-zinc-100 hover:shadow-md&#xA;                  dark:hover:bg-zinc-800&#34;&gt;&#xA;&#xA;                &lt;div class=&#34;mt-3 mb-2 flex-shrink-0 w-16 h-16 rounded-full overflow-hidden&#34;&gt;&lt;img src=&#34;https://img.chlo.is/avatar/02.webp&#34; alt=&#34;Chlorine&#39;s avatar&#34;&#xA;                        class=&#34;h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 no-lightbox&#34;&gt;&lt;/div&gt;&#xA;&#xA;                &lt;div class=&#34;flex w-full flex-grow flex-col justify-between text-center&#34;&gt;&#xA;                    &lt;div&gt;&#xA;                        &lt;div id=&#34;friend-name-chlorine&#34; class=&#34;font-medium text-card-foreground/70&#34;&gt;Chlorine&lt;span class=&#34;sr-only&#34;&gt;(opens in a new tab)&lt;/span&gt;&#xA;                        &lt;/div&gt;&#xA;                        &lt;p id=&#34;friend-des-chlorine&#34; class=&#34;px-1 text-sm text-muted-foreground line-clamp-2&#34;&gt;An Element-chan who writes.&lt;/p&gt;&#xA;                    &lt;/div&gt;&lt;div class=&#34;mt-2 flex items-center justify-center gap-1.5 text-xs text-muted-foreground&#34;&#xA;                        aria-hidden=&#34;true&#34;&gt;&#xA;                        &lt;i class=&#34;i-carbon-notebook opacity-70&#34;&gt;&lt;/i&gt;&#xA;                        &lt;span&gt;主题作者&lt;/span&gt;&#xA;                    &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;absolute top-2.5 left-2.5 px-1.5 py-0.5 text-xs rounded-full bg-zinc-200/70 dark:bg-zinc-800/70 text-card-foreground&#34;&#xA;                    aria-hidden=&#34;true&#34;&gt;&#xA;                    &lt;span class=&#34;font-medium tracking-tight&#34;&gt;408A&lt;/span&gt;&#xA;                &lt;/div&gt;&lt;/a&gt;&#xA;        &lt;/li&gt;&lt;li class=&#34;group&#34;&gt;&#xA;            &lt;a href=&#34;https://example.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&#xA;                aria-labelledby=&#34;friend-name-test_user&#34; aria-describedby=&#34;friend-des-test_user&#34;&#xA;                class=&#34;friend-card relative flex h-full flex-col items-center&#xA;                  rounded-2xl p-4 bg-card&#xA;                  transition-all duration-200&#xA;                  hover:bg-zinc-100 hover:shadow-md&#xA;                  dark:hover:bg-zinc-800&#34;&gt;&#xA;&#xA;                &lt;div class=&#34;mt-3 mb-2 flex-shrink-0 w-16 h-16 rounded-full overflow-hidden&#34;&gt;&lt;img src=&#34;http://localhost:6948/img/avatar.png&#34; alt=&#34;TEST_user&#39;s avatar&#34;&#xA;                        class=&#34;h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 no-lightbox&#34;&gt;&lt;/div&gt;&#xA;&#xA;                &lt;div class=&#34;flex w-full flex-grow flex-col justify-between text-center&#34;&gt;&#xA;                    &lt;div&gt;&#xA;                        &lt;div id=&#34;friend-name-test_user&#34; class=&#34;font-medium text-card-foreground/70&#34;&gt;TEST_user&lt;span class=&#34;sr-only&#34;&gt;(opens in a new tab)&lt;/span&gt;&#xA;                        &lt;/div&gt;&#xA;                        &lt;p id=&#34;friend-des-test_user&#34; class=&#34;px-1 text-sm text-muted-foreground line-clamp-2&#34;&gt;TEST&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>关于</title>
-      <link>http://localhost:10263/about/</link>
-      <pubDate>Sat, 04 Oct 2025 19:34:50 +0800</pubDate>
-      <guid>http://localhost:10263/about/</guid>
-      <description>&lt;p&gt;您好！该网站正在搭建中捏，您可以访问 &lt;a href=&#34;blog.fanzhuo.xyz&#34;&gt;Fanzhuo&amp;rsquo;s Blog&lt;/a&gt; 查看博客内容!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>http://localhost:10263/posts/test/</link>
-      <pubDate>Sun, 28 Sep 2025 21:37:01 +0800</pubDate>
-      <guid>http://localhost:10263/posts/test/</guid>
-      <description>&lt;h1 id=&#34;测试&#34;&gt;测试&lt;/h1&gt;&#xA;&lt;h2 id=&#34;测试-1&#34;&gt;测试&lt;/h2&gt;&#xA;&lt;h3 id=&#34;测试-2&#34;&gt;测试&lt;/h3&gt;&#xA;&lt;p&gt;正文。&lt;/p&gt;&#xA;&lt;div class=&#34;my-6 rounded-lg p-4 border-l-4 border-red-500 bg-red-50/50 dark:bg-red-500/10&#34; role=&#34;status&#34;&gt;&#xA;    &lt;div class=&#34;mb-2 flex items-center gap-2 font-medium pl-2 text-red-700 dark:text-red-300&#34;&gt;&#xA;        &lt;i class=&#34;w-5 h-5 i-carbon-warning-alt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&#xA;        &lt;span&gt;Caution&lt;/span&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;p-2 pb-4 prose-p:my-0&#34;&gt;&#xA;        &lt;p&gt;噢！&lt;/p&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&lt;div class=&#34;my-6 rounded-lg p-4 border-l-4 border-purple-500 bg-purple-50/50 dark:bg-purple-500/10&#34; role=&#34;status&#34;&gt;&#xA;    &lt;div class=&#34;mb-2 flex items-center gap-2 font-medium pl-2 text-purple-700 dark:text-purple-300&#34;&gt;&#xA;        &lt;i class=&#34;w-5 h-5 i-carbon-star&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&#xA;        &lt;span&gt;Important&lt;/span&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;p-2 pb-4 prose-p:my-0&#34;&gt;&#xA;        &lt;p&gt;噢！&lt;/p&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fanzhuo's Blog</title><link>https://fanzhuo.xyz/</link><description>Recent content on Fanzhuo's Blog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 04 Oct 2025 20:08:45 +0800</lastBuildDate><atom:link href="https://fanzhuo.xyz/index.xml" rel="self" type="application/rss+xml"/><item><title>搜索</title><link>https://fanzhuo.xyz/search/</link><pubDate>Sat, 04 Oct 2025 20:08:45 +0800</pubDate><guid>https://fanzhuo.xyz/search/</guid><description>&lt;p&gt;咕咕咕咕咕……&lt;/p&gt;</description></item><item><title>朋友</title><link>https://fanzhuo.xyz/friends/</link><pubDate>Sat, 04 Oct 2025 19:47:01 +0800</pubDate><guid>https://fanzhuo.xyz/friends/</guid><description>&lt;style&gt;
+ .friends-wrapper .friend-card {
+ border: 1px solid var(--herm-border) !important;
+ }
+
+ .friends-wrapper .friend-card:hover {
+ border: 1px solid var(--herm-border) !important;
+ }
+&lt;/style&gt;
+
+&lt;div class="friends-wrapper"&gt;
+ &lt;ul class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 list-none! p-0!"&gt;&lt;li class="group"&gt;
+ &lt;a href="https://chlo.is" target="_blank" rel="noopener noreferrer"
+ aria-labelledby="friend-name-chlorine" aria-describedby="friend-des-chlorine"
+ class="friend-card relative flex h-full flex-col items-center
+ rounded-2xl p-4 bg-card
+ transition-all duration-200
+ hover:bg-zinc-100 hover:shadow-md
+ dark:hover:bg-zinc-800"&gt;
+
+ &lt;div class="mt-3 mb-2 flex-shrink-0 w-16 h-16 rounded-full overflow-hidden"&gt;&lt;img src="https://img.chlo.is/avatar/02.webp" alt="Chlorine's avatar"
+ class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 no-lightbox"&gt;&lt;/div&gt;
+
+ &lt;div class="flex w-full flex-grow flex-col justify-between text-center"&gt;
+ &lt;div&gt;
+ &lt;div id="friend-name-chlorine" class="font-medium text-card-foreground/70"&gt;Chlorine&lt;span class="sr-only"&gt;(opens in a new tab)&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;p id="friend-des-chlorine" class="px-1 text-sm text-muted-foreground line-clamp-2"&gt;An Element-chan who writes.&lt;/p&gt;
+ &lt;/div&gt;&lt;div class="mt-2 flex items-center justify-center gap-1.5 text-xs text-muted-foreground"
+ aria-hidden="true"&gt;
+ &lt;i class="i-carbon-notebook opacity-70"&gt;&lt;/i&gt;
+ &lt;span&gt;主题作者&lt;/span&gt;
+ &lt;/div&gt;&lt;/div&gt;&lt;div class="absolute top-2.5 left-2.5 px-1.5 py-0.5 text-xs rounded-full bg-zinc-200/70 dark:bg-zinc-800/70 text-card-foreground"
+ aria-hidden="true"&gt;
+ &lt;span class="font-medium tracking-tight"&gt;408A&lt;/span&gt;
+ &lt;/div&gt;&lt;/a&gt;
+ &lt;/li&gt;&lt;li class="group"&gt;
+ &lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"
+ aria-labelledby="friend-name-test_user" aria-describedby="friend-des-test_user"
+ class="friend-card relative flex h-full flex-col items-center
+ rounded-2xl p-4 bg-card
+ transition-all duration-200
+ hover:bg-zinc-100 hover:shadow-md
+ dark:hover:bg-zinc-800"&gt;
+
+ &lt;div class="mt-3 mb-2 flex-shrink-0 w-16 h-16 rounded-full overflow-hidden"&gt;&lt;img src="http://localhost:6948/img/avatar.png" alt="TEST_user's avatar"
+ class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 no-lightbox"&gt;&lt;/div&gt;
+
+ &lt;div class="flex w-full flex-grow flex-col justify-between text-center"&gt;
+ &lt;div&gt;
+ &lt;div id="friend-name-test_user" class="font-medium text-card-foreground/70"&gt;TEST_user&lt;span class="sr-only"&gt;(opens in a new tab)&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;p id="friend-des-test_user" class="px-1 text-sm text-muted-foreground line-clamp-2"&gt;TEST&lt;/p&gt;</description></item><item><title>关于</title><link>https://fanzhuo.xyz/about/</link><pubDate>Sat, 04 Oct 2025 19:34:50 +0800</pubDate><guid>https://fanzhuo.xyz/about/</guid><description>&lt;p&gt;您好！该网站正在搭建中捏，您可以访问 &lt;a href="blog.fanzhuo.xyz"&gt;Fanzhuo&amp;rsquo;s Blog&lt;/a&gt; 查看博客内容!&lt;/p&gt;</description></item><item><title>Test</title><link>https://fanzhuo.xyz/posts/test/</link><pubDate>Sun, 28 Sep 2025 21:37:01 +0800</pubDate><guid>https://fanzhuo.xyz/posts/test/</guid><description>&lt;h1 id="测试"&gt;测试&lt;/h1&gt;
+&lt;h2 id="测试-1"&gt;测试&lt;/h2&gt;
+&lt;h3 id="测试-2"&gt;测试&lt;/h3&gt;
+&lt;p&gt;正文。&lt;/p&gt;
+&lt;div class="my-6 rounded-lg p-4 border-l-4 border-red-500 bg-red-50/50 dark:bg-red-500/10" role="status"&gt;
+ &lt;div class="mb-2 flex items-center gap-2 font-medium pl-2 text-red-700 dark:text-red-300"&gt;
+ &lt;i class="w-5 h-5 i-carbon-warning-alt" aria-hidden="true"&gt;&lt;/i&gt;
+ &lt;span&gt;Caution&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="p-2 pb-4 prose-p:my-0"&gt;
+ &lt;p&gt;噢！&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/div&gt;&lt;div class="my-6 rounded-lg p-4 border-l-4 border-purple-500 bg-purple-50/50 dark:bg-purple-500/10" role="status"&gt;
+ &lt;div class="mb-2 flex items-center gap-2 font-medium pl-2 text-purple-700 dark:text-purple-300"&gt;
+ &lt;i class="w-5 h-5 i-carbon-star" aria-hidden="true"&gt;&lt;/i&gt;
+ &lt;span&gt;Important&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="p-2 pb-4 prose-p:my-0"&gt;
+ &lt;p&gt;噢！&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
