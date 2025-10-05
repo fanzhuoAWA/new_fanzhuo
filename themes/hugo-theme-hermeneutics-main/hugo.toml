@@ -44,39 +44,39 @@ title                  = "Fanzhuo's Blog"
     identifier = "posts"
     name       = "Posts"
     parent     = "archives"
-    url        = "posts"
+    url        = "/posts/"
     weight     = 10
 
 [[menu.main]]
     identifier = "categories"
     name       = "Categories"
     parent     = "archives"
-    url        = "categories"
+    url        = "/categories/"
     weight     = 20
 
 [[menu.main]]
     identifier = "tags"
     name       = "Tags"
     parent     = "archives"
-    url        = "tags"
+    url        = "/tags/"
     weight     = 30
 
 [[menu.main]]
     identifier = "friends"
     name       = "Friends"
-    url        = "friends"
+    url        = "/friends/"
     weight     = 20
 
 [[menu.main]]
     identifier = "about"
     name       = "About"
-    url        = "about"
+    url        = "/about/"
     weight     = 30
 
 [[menu.main]]
     identifier = "search"
     name       = "Search"
-    url        = "search"
+    url        = "/search/"
     weight     = 40
 
 [params]
