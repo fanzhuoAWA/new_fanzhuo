@@ -11,7 +11,7 @@ tags:
 slug: cpp-binary-search-template
 summary: 关于C++二分查找的几种实现方式与思考
 description: 本文整理了C++中二分查找的几种经典实现模板，包括整数二分、实数二分以及标准库函数的使用。
-featuredImage: https://cdn.pixabay.com/photo/2017/09/21/13/32/girl-2771931_1280.jpg
+featuredImage: /img/C++二分算法.png
 ---
 
 早。
