@@ -82,7 +82,7 @@ title                  = "Fanzhuo's Blog"
 [params]
     # 站点基础信息
     description = "My Development Logs, Life Essays, and Algorithm Discussions."
-    keywords    = ["Blog", "Developer", "Hugo", "Open Source", "Tech"]
+    keywords    = ["Blog", "Developer", "Hugo", "Open Source", "Tech", "Computer Science", "Writing", "中文博客"]
     license     = "CC BY-NC-SA 4.0"
     licenselink = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-Hans"
     startDate   = "09/28/2025 00:00:00"
