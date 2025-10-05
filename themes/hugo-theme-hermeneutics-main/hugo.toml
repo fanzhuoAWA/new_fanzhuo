@@ -1,10 +1,10 @@
 baseURL                = "https://fanzhuo.xyz/"
-defaultContentLanguage = "en"
-enableCsrf             = false
-hasCJKLanguage         = false
-languageCode           = "en-US"
+defaultContentLanguage = "zh"
+enableCsrf             = true
+hasCJKLanguage         = true
+languageCode           = "zh"
 theme                  = "hugo-theme-hermeneutics-main"
-timeZone               = "Europe/Berlin"
+timeZone               = "Asia/Shanghai"
 title                  = "Fanzhuo's Blog"
 
 [mediaTypes]

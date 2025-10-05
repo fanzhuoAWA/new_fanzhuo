@@ -1,0 +1,24 @@
+<!-- layouts/shortcodes/relative-time.html -->
+{{- $targetDate := .Get 0 | time -}}
+{{- $now := now -}}
+{{- $diff := $now.Sub $targetDate -}}
+
+{{- /* 修正后的数学计算：使用 div 和 mod 函数 */ -}}
+{{- $totalHours := $diff.Hours -}}
+{{- $years := div $totalHours 8760 | math.Floor | int -}}
+{{- $remainingHoursAfterYears := mod $totalHours 8760 -}}
+{{- $months := div $remainingHoursAfterYears 720 | math.Floor | int -}}
+{{- $remainingHoursAfterMonths := mod $remainingHoursAfterYears 720 -}}
+{{- $days := div $remainingHoursAfterMonths 24 | math.Floor | int -}}
+
+<span title="目标日期: {{ $targetDate.Format "2006-01-02" }}">
+{{- if gt $years 0 -}}
+    {{ $years }} 年 {{ $months }} 个月
+{{- else if gt $months 0 -}}
+    {{ $months }} 个月 {{ $days }} 天
+{{- else if gt $days 0 -}}
+    {{ $days }} 天
+{{- else -}}
+    今天之内
+{{- end -}}
+</span>

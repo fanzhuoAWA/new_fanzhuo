@@ -1,4 +1,7 @@
 baseURL = 'https://fanzhuo.xyz/'
-languageCode = 'en-us'
+languageCode = 'zh'
 title = "Fanzhuo's Blog"
 theme = 'hugo-theme-hermeneutics-main'
+enableCsrf             = true
+hasCJKLanguage         = true
+defaultContentLanguage = "zh"

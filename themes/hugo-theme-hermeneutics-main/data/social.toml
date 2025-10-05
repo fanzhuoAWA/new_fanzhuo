@@ -1,20 +1,20 @@
 # Basic (We all need these, I think)
 [[social]]
-    color = "#4A90E2"
+    color = "#9DBE99"
     icon  = "i-carbon-home"
     name  = "Home"
     rel   = ""
     url   = "/"
 
 [[social]]
-    color = "#EA4335"
+    color = "#b9726cff"
     icon  = "i-carbon-email"
     name  = "Email"
     rel   = ""
     url   = "mailto:fan_zhuo@outlook.com"
 
 [[social]]
-    color = "#EE802F"
+    color = "#E6D3A3"
     icon  = "i-carbon-rss"
     name  = "Atom Feed"
     rel   = ""
@@ -22,35 +22,35 @@
 
 # Dev Platforms
 [[social]]
-    color = "#181717"
+    color = "#4A4A4A"
     icon  = "i-carbon-logo-github"
     name  = "GitHub"
     rel   = ""
     url   = "https://github.com/fanzhuoAWA"
 
 [[social]]
-    color = "#1DA1F2"
+    color = "#81a5bbff"
     icon  = "i-carbon-logo-twitter"
     name  = "Twitter/X"
     rel   = ""
     url   = "https://x.com/fanzhuoW"
 
 [[social]]
-    color = "#00A1D6"
+    color = "#cc6e9dff"
     icon  = "i-simple-icons-bilibili"
     name  = "Bilibili"
     rel   = ""
     url   = "https://space.bilibili.com/1269272961"
 
 [[social]]
-    color = "#FFCC00"
+    color = "#83dbd7ff"
     icon  = "i-carbon-logo-qq"
     name  = "QQ"
     rel   = ""
     url   = "https://qm.qq.com/q/OIIUabbTOK"
 
 [[social]]
-    color = "#8E6EDF"
+    color = "#a191c7ff"
     icon  = "i-simple-icons-afdian"
     name  = "Afdian"
     rel   = ""
