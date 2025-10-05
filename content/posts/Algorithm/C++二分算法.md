@@ -96,4 +96,4 @@ int pos = lower_bound(a + 1, a + 49, 5) - a;// 得到了我们想要的位置
 
 ## 后记
 
-希望这份笔记对你有用。如果你发现了什么错误或者有更好的写法，欢迎在评论区指出，也可以问问 [Purinliang](https://purinliang.github.io) (*^▽^*)。
+希望这份笔记对你有用。如果你发现了什么错误或者有更好的写法，欢迎在评论区（现在还没有，可以发邮件给我QAQ）指出，也可以问问 [Purinliang](https://purinliang.github.io) (*^▽^*)。
