@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>猫 on Fanzhuo's Blog</title><link>https://fanzhuo.xyz/tags/%E7%8C%AB/</link><description>Recent content in 猫 on Fanzhuo's Blog</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Tue, 23 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://fanzhuo.xyz/tags/%E7%8C%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>三条</title><link>https://fanzhuo.xyz/posts/life/santeiyao/</link><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><guid>https://fanzhuo.xyz/posts/life/santeiyao/</guid><description>一只黄眼睛白猫的故事</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>猫 on Fanzhuo&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E7%8C%AB/</link>
+    <description>Recent content in 猫 on Fanzhuo&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 23 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%8C%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三条</title>
+      <link>http://localhost:1313/posts/life/santeiyao/</link>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/life/santeiyao/</guid>
+      <description>一只黄眼睛白猫的故事</description>
+    </item>
+  </channel>
+</rss>

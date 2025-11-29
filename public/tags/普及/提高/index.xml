@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>普及/提高 on Fanzhuo's Blog</title><link>https://fanzhuo.xyz/tags/%E6%99%AE%E5%8F%8A/%E6%8F%90%E9%AB%98/</link><description>Recent content in 普及/提高 on Fanzhuo's Blog</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fanzhuo.xyz/tags/%E6%99%AE%E5%8F%8A/%E6%8F%90%E9%AB%98/index.xml" rel="self" type="application/rss+xml"/><item><title>P11385 [POI 2024/2025 R1] Walki robotów 题解</title><link>https://fanzhuo.xyz/posts/algorithm/poi-2024-walki-robotow-solution/</link><pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate><guid>https://fanzhuo.xyz/posts/algorithm/poi-2024-walki-robotow-solution/</guid><description>别样的机器人大赛（</description></item><item><title>P1364 医院设置题解</title><link>https://fanzhuo.xyz/posts/algorithm/hospital-placement-solution/</link><pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate><guid>https://fanzhuo.xyz/posts/algorithm/hospital-placement-solution/</guid><description>医院设置问题的暴力与换根DP解法详解</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>普及/提高 on Fanzhuo&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E6%99%AE%E5%8F%8A/%E6%8F%90%E9%AB%98/</link>
+    <description>Recent content in 普及/提高 on Fanzhuo&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%99%AE%E5%8F%8A/%E6%8F%90%E9%AB%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>P11385 [POI 2024/2025 R1] Walki robotów 题解</title>
+      <link>http://localhost:1313/posts/algorithm/poi-2024-walki-robotow-solution/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/algorithm/poi-2024-walki-robotow-solution/</guid>
+      <description>别样的机器人大赛（</description>
+    </item>
+    <item>
+      <title>P1364 医院设置题解</title>
+      <link>http://localhost:1313/posts/algorithm/hospital-placement-solution/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/algorithm/hospital-placement-solution/</guid>
+      <description>医院设置问题的暴力与换根DP解法详解</description>
+    </item>
+  </channel>
+</rss>

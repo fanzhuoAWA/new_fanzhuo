@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>开发 on Fanzhuo's Blog</title><link>https://fanzhuo.xyz/categories/%E5%BC%80%E5%8F%91/</link><description>Recent content in 开发 on Fanzhuo's Blog</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 20 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://fanzhuo.xyz/categories/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>搭建免费、无限空间的图床</title><link>https://fanzhuo.xyz/posts/development/build-free-image-hosting/</link><pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate><guid>https://fanzhuo.xyz/posts/development/build-free-image-hosting/</guid><description>基于 Telegraph 的图片上传工具搭建指南</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发 on Fanzhuo&#39;s Blog</title>
+    <link>http://localhost:1313/categories/%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 开发 on Fanzhuo&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 20 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建免费、无限空间的图床</title>
+      <link>http://localhost:1313/posts/development/build-free-image-hosting/</link>
+      <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/development/build-free-image-hosting/</guid>
+      <description>基于 Telegraph 的图片上传工具搭建指南</description>
+    </item>
+  </channel>
+</rss>

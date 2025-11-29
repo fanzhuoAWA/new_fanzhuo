@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>树的重心 on Fanzhuo's Blog</title><link>https://fanzhuo.xyz/tags/%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83/</link><description>Recent content in 树的重心 on Fanzhuo's Blog</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fanzhuo.xyz/tags/%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83/index.xml" rel="self" type="application/rss+xml"/><item><title>P1364 医院设置题解</title><link>https://fanzhuo.xyz/posts/algorithm/hospital-placement-solution/</link><pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate><guid>https://fanzhuo.xyz/posts/algorithm/hospital-placement-solution/</guid><description>医院设置问题的暴力与换根DP解法详解</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>树的重心 on Fanzhuo&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83/</link>
+    <description>Recent content in 树的重心 on Fanzhuo&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>P1364 医院设置题解</title>
+      <link>http://localhost:1313/posts/algorithm/hospital-placement-solution/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/algorithm/hospital-placement-solution/</guid>
+      <description>医院设置问题的暴力与换根DP解法详解</description>
+    </item>
+  </channel>
+</rss>
