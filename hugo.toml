@@ -5,3 +5,11 @@ theme = 'hugo-theme-hermeneutics-main'
 enableCsrf             = true
 hasCJKLanguage         = true
 defaultContentLanguage = "zh"
+
+[markup.goldmark.renderer]
+  # 这是允许渲染 <img> 等原生HTML标签的关键开关，必须为 true
+  unsafe = true
+
+[markup.goldmark.extensions]
+  # 这是让 Markdown 中 `{ width="70%" }` 这类属性生效的关键
+  attribute = true
