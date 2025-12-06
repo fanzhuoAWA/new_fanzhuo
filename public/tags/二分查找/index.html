@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4516&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>二分查找 | Fanzhuo&#39;s Blog</title><meta name="description" content="My Development Logs, Life Essays, and Algorithm Discussions."><meta name="keywords" content="Blog ,Developer ,Hugo ,Open Source ,Tech ,Computer Science ,Writing ,中文博客"><link rel="alternate" hreflang="zh" href="http://localhost:1313/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" /><link rel="alternate" hreflang="x-default" href="http://localhost:1313/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" /><meta property="og:url" content="http://localhost:1313/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+<title>二分查找 | Fanzhuo&#39;s Blog</title><meta name="description" content="My Development Logs, Life Essays, and Algorithm Discussions."><meta name="keywords" content="Blog ,Developer ,Hugo ,Open Source ,Tech ,Computer Science ,Writing ,中文博客"><link rel="alternate" hreflang="zh" href="http://localhost:4516/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" /><link rel="alternate" hreflang="x-default" href="http://localhost:4516/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" /><meta property="og:url" content="http://localhost:4516/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
   <meta property="og:site_name" content="Fanzhuo&#39;s Blog">
   <meta property="og:title" content="二分查找">
   <meta property="og:description" content="My Development Logs, Life Essays, and Algorithm Discussions.">
@@ -27,7 +27,7 @@
 <body class="min-h-screen flex flex-col gap-y-4 bg-background text-foreground transition-colors"><div class="h-card p-author hidden">
     <span class="p-name">Fanzhuo</span>
 
-    <img class="u-photo" src="http://localhost:1313/img/avatar.png" alt="Fanzhuo"><p class="p-note">My Development Logs, Life Essays, and Algorithm Discussions.</p><a class="u-url u-uid" href="http://localhost:1313/">http://localhost:1313/</a><span class="p-category">Indie Blogger</span><span class="p-category">Developer</span><span class="p-category">Open Source Enthusiast</span><span class="p-category">Tech Lover</span><span class="p-category">OIer</span></div><header class="sticky top-0 left-0 right-0 bg-background/80 backdrop-blur z-[var(--herm-zidx-header)]">
+    <img class="u-photo" src="http://localhost:4516/img/avatar.png" alt="Fanzhuo"><p class="p-note">My Development Logs, Life Essays, and Algorithm Discussions.</p><a class="u-url u-uid" href="http://localhost:4516/">http://localhost:4516/</a><span class="p-category">Indie Blogger</span><span class="p-category">Developer</span><span class="p-category">Open Source Enthusiast</span><span class="p-category">Tech Lover</span><span class="p-category">OIer</span></div><header class="sticky top-0 left-0 right-0 bg-background/80 backdrop-blur z-[var(--herm-zidx-header)]">
     <div class="container mx-auto px-4 flex items-center justify-between h-[var(--herm-header-height)] relative">
         
         <div class="flex-1 flex justify-start">
@@ -41,31 +41,31 @@
         <nav class="hidden md:flex flex-shrink-0" id="header-menu" aria-label="Main navigation">
             <ul
                 class="flex items-center bg-muted/50 backdrop-blur rounded-full px-4 h-9 gap-6 text-sm font-medium text-muted-foreground"><li class="relative group">
-                    <a aria-label="Menu Archives" href="http://localhost:1313/"
+                    <a aria-label="Menu Archives" href="http://localhost:4516/"
                         class="hover:text-primary transition-colors">
                         Archives
                     </a><ul class="flex flex-col overflow-hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 invisible 
                        group-hover:opacity-100 group-hover:visible transition-all duration-200
                        w-32 py-1 rounded-lg border border-border/50 backdrop-blur
                        shadow-lg shadow-muted/5"><li>
-                            <a aria-label="Posts" href="http://localhost:1313/posts/" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
+                            <a aria-label="Posts" href="http://localhost:4516/posts/" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
                               ">Posts</a>
                         </li><li>
-                            <a aria-label="Categories" href="http://localhost:1313/categories/" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
+                            <a aria-label="Categories" href="http://localhost:4516/categories/" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
                               ">Categories</a>
                         </li><li>
-                            <a aria-label="Tags" href="http://localhost:1313/tags/" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
+                            <a aria-label="Tags" href="http://localhost:4516/tags/" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
                               ">Tags</a>
                         </li></ul></li><li class="relative group">
-                    <a aria-label="Menu Friends" href="http://localhost:1313/friends/"
+                    <a aria-label="Menu Friends" href="http://localhost:4516/friends/"
                         class="hover:text-primary transition-colors">
                         Friends
                     </a></li><li class="relative group">
-                    <a aria-label="Menu About" href="http://localhost:1313/about/"
+                    <a aria-label="Menu About" href="http://localhost:4516/about/"
                         class="hover:text-primary transition-colors">
                         About
                     </a></li><li class="relative group">
-                    <a aria-label="Menu Search" href="http://localhost:1313/search/"
+                    <a aria-label="Menu Search" href="http://localhost:4516/search/"
                         class="hover:text-primary transition-colors">
                         Search
                     </a></li></ul>
@@ -89,22 +89,22 @@
                 class="fixed top-[var(--herm-header-height)] left-0 right-0 bg-background/95 backdrop-blur border-b border-border/50 z-[var(--herm-zidx-dropdown)]">
                 <div class="container max-w-container-content mx-auto px-4 py-4">
                     <ul class="px-4 space-y-4"><li>
-                            <a aria-label="Archives" href="http://localhost:1313/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                            <a aria-label="Archives" href="http://localhost:4516/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
                     ">Archives</a><ul class="mt-2 ml-4 space-y-3"><li>
-                                    <a aria-label="Posts" href="http://localhost:1313/posts/" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
+                                    <a aria-label="Posts" href="http://localhost:4516/posts/" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
                             ">Posts</a>
                                 </li><li>
-                                    <a aria-label="Categories" href="http://localhost:1313/categories/" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
+                                    <a aria-label="Categories" href="http://localhost:4516/categories/" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
                             ">Categories</a>
                                 </li><li>
-                                    <a aria-label="Tags" href="http://localhost:1313/tags/" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
+                                    <a aria-label="Tags" href="http://localhost:4516/tags/" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
                             ">Tags</a>
                                 </li></ul></li><li>
-                            <a aria-label="Friends" href="http://localhost:1313/friends/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                            <a aria-label="Friends" href="http://localhost:4516/friends/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
                     ">Friends</a></li><li>
-                            <a aria-label="About" href="http://localhost:1313/about/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                            <a aria-label="About" href="http://localhost:4516/about/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
                     ">About</a></li><li>
-                            <a aria-label="Search" href="http://localhost:1313/search/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                            <a aria-label="Search" href="http://localhost:4516/search/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
                     ">Search</a></li></ul>
                 </div>
             </nav>
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div><script src="/js/global/runtime.js"defer></script><span w="1" h="1" rounded="full" bg="muted-foreground/30"></span><div class="flex items-center gap-2">
     <i class="i-carbon-text-font w-4 h-4"></i>
     <span>
-        共 <span class="tabular-nums font-mono">3272</span> 字，</span>
+        共 <span class="tabular-nums font-mono">2811</span> 字，</span>
 </div></div>
 
         <div text="sm muted-foreground/60" flex="~ col md:row" gap="3" class="items-center justify-between"><div class="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
