@@ -44,7 +44,7 @@
 
 [[social]]
     color = "#83dbd7ff"
-    icon  = "i-carbon-logo-qq"
+    icon  = "i-custom-qq"
     name  = "QQ"
     rel   = ""
     url   = "https://qm.qq.com/q/OIIUabbTOK"

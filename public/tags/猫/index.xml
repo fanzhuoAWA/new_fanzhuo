@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>猫 on Fanzhuo&#39;s Blog</title>
-    <link>http://localhost:4516/tags/%E7%8C%AB/</link>
+    <link>https://fanzhuo.xyz/tags/%E7%8C%AB/</link>
     <description>Recent content in 猫 on Fanzhuo&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 23 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:4516/tags/%E7%8C%AB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://fanzhuo.xyz/tags/%E7%8C%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>猫</title>
-      <link>http://localhost:4516/posts/life/cat/</link>
+      <link>https://fanzhuo.xyz/posts/life/cat/</link>
       <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4516/posts/life/cat/</guid>
+      <guid>https://fanzhuo.xyz/posts/life/cat/</guid>
       <description>两只流浪猫。</description>
     </item>
   </channel>

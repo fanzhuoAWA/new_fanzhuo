@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Fanzhuo&#39;s Blog</title>
-    <link>http://localhost:4516/posts/</link>
+    <link>https://fanzhuo.xyz/posts/</link>
     <description>Recent content in Posts on Fanzhuo&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 23 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:4516/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://fanzhuo.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>猫</title>
-      <link>http://localhost:4516/posts/life/cat/</link>
+      <link>https://fanzhuo.xyz/posts/life/cat/</link>
       <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4516/posts/life/cat/</guid>
+      <guid>https://fanzhuo.xyz/posts/life/cat/</guid>
       <description>两只流浪猫。</description>
     </item>
     <item>
       <title>搭建免费、无限空间的图床</title>
-      <link>http://localhost:4516/posts/development/build-free-image-hosting/</link>
+      <link>https://fanzhuo.xyz/posts/development/build-free-image-hosting/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4516/posts/development/build-free-image-hosting/</guid>
+      <guid>https://fanzhuo.xyz/posts/development/build-free-image-hosting/</guid>
       <description>基于 Telegraph 的图片上传工具搭建指南</description>
     </item>
     <item>
       <title>C&#43;&#43;二分算法</title>
-      <link>http://localhost:4516/posts/algorithm/cpp-binary-search-template/</link>
+      <link>https://fanzhuo.xyz/posts/algorithm/cpp-binary-search-template/</link>
       <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4516/posts/algorithm/cpp-binary-search-template/</guid>
+      <guid>https://fanzhuo.xyz/posts/algorithm/cpp-binary-search-template/</guid>
       <description>关于C++二分查找的几种实现方式与思考</description>
     </item>
     <item>
       <title>P11385 [POI 2024/2025 R1] Walki robotów 题解</title>
-      <link>http://localhost:4516/posts/algorithm/poi-2024-walki-robotow-solution/</link>
+      <link>https://fanzhuo.xyz/posts/algorithm/poi-2024-walki-robotow-solution/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4516/posts/algorithm/poi-2024-walki-robotow-solution/</guid>
+      <guid>https://fanzhuo.xyz/posts/algorithm/poi-2024-walki-robotow-solution/</guid>
       <description>别样的机器人大赛（</description>
     </item>
     <item>
       <title>P1364 医院设置题解</title>
-      <link>http://localhost:4516/posts/algorithm/hospital-placement-solution/</link>
+      <link>https://fanzhuo.xyz/posts/algorithm/hospital-placement-solution/</link>
       <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4516/posts/algorithm/hospital-placement-solution/</guid>
+      <guid>https://fanzhuo.xyz/posts/algorithm/hospital-placement-solution/</guid>
       <description>医院设置问题的暴力与换根DP解法详解</description>
     </item>
   </channel>

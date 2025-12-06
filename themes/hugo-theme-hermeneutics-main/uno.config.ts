@@ -1,12 +1,23 @@
 import { defineConfig, presetWind4, presetIcons, presetAttributify, presetTypography } from 'unocss'
 
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
     presets: [
         presetWind4({
             dark: 'class',
         }),
-        presetIcons(),
+        presetIcons({
+            collections: {
+                // 添加一个名为 `custom` 的自定义图标集
+                // 它会自动加载 `./static/img` 目录下的所有SVG文件
+                // 图标名将是文件名（去掉 `.svg` 后缀）
+                'custom': FileSystemIconLoader(
+                    './static/img',
+                    svg => svg.replace(/^<svg /, '<svg fill="currentColor" ')
+                )
+            },
+        }),
         presetAttributify(),
         presetTypography(),
     ],
