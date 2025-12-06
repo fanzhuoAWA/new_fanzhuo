@@ -4,9 +4,9 @@ title : Git push
 draft : true
 ---
 
-.\pagefind --site public
-
 hugo
+
+.\pagefind --site public
 
 git add .
 
